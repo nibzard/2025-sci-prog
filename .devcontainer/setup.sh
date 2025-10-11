@@ -65,14 +65,17 @@ python -m pip install --upgrade pip --quiet || log_warning "Pip upgrade failed, 
 
 # Install UV with better error handling
 log_info "⚡ Installing UV package manager..."
+UV_AVAILABLE=false
 if command -v uv >/dev/null 2>&1; then
     log_success "UV is already installed"
+    UV_AVAILABLE=true
 else
     if curl -LsSf https://astral.sh/uv/install.sh | sh; then
         export PATH="$HOME/.local/bin:$PATH"
         echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
         echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc 2>/dev/null || true
         log_success "UV installed successfully"
+        UV_AVAILABLE=true
     else
         log_error "Failed to install UV"
         log_info "You can still use pip for package management"
@@ -115,10 +118,33 @@ install_packages plotly requests beautifulsoup4
 log_info "🛠️ Installing development tools..."
 install_packages pytest black flake8 mypy
 
-# Install AI and modern tools (marimo is now in pyproject.toml)
-log_info "🤖 Installing AI and modern tools..."
-# Note: marimo is installed via uv sync from pyproject.toml dependencies
-log_info "📝 Marimo will be installed via project dependencies"
+# Install AI and modern tools from project dependencies
+log_info "🤖 Installing AI and modern tools from project dependencies..."
+
+# Initialize UV project and sync dependencies
+if [ "$UV_AVAILABLE" = true ]; then
+    log_info "🔄 Initializing UV project and syncing dependencies..."
+
+    # Check if we're in a UV project, if not initialize one
+    if [ ! -f "pyproject.toml" ]; then
+        log_warning "pyproject.toml not found, skipping UV sync"
+    else
+        # Ensure UV cache directory exists
+        mkdir -p /tmp/uv-cache
+
+        # Run uv sync to install all project dependencies including marimo
+        if uv sync --quiet; then
+            log_success "Project dependencies installed successfully with uv sync"
+        else
+            log_warning "uv sync failed, trying alternative installation..."
+            # Fallback: install marimo and other key dependencies directly
+            install_packages marimo
+        fi
+    fi
+else
+    log_warning "UV not available, installing marimo with pip..."
+    python -m pip install marimo --quiet || log_warning "Marimo installation failed"
+fi
 
 # Install AI assistant CLI tools
 log_info "🤖 Installing AI assistant CLI tools..."
@@ -186,95 +212,6 @@ else
     log_warning "npm not available, installing fewer AI CLI tools"
 fi
 
-# Create simple AI helper scripts
-log_info "📜 Creating AI helper scripts..."
-
-# Create a simple AI helper script using Python SDKs
-cat > ~/ai_helper.py << 'EOF'
-#!/usr/bin/env python3
-"""
-Simple AI helper script for students to interact with various AI models
-Requires API keys to be set as environment variables
-"""
-import os
-import sys
-import argparse
-
-try:
-    from openai import OpenAI
-except ImportError:
-    OpenAI = None
-
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
-
-def get_openai_response(prompt, model="gpt-3.5-turbo"):
-    """Get response from OpenAI"""
-    if not OpenAI:
-        return "OpenAI SDK not installed"
-
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        return "OPENAI_API_KEY environment variable not set"
-
-    try:
-        client = OpenAI(api_key=api_key)
-        response = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        return f"OpenAI API error: {e}"
-
-def get_claude_response(prompt, model="claude-3-sonnet-20240229"):
-    """Get response from Claude"""
-    if not anthropic:
-        return "Anthropic SDK not installed"
-
-    api_key = os.getenv("ANTHROPIC_API_KEY")
-    if not api_key:
-        return "ANTHROPIC_API_KEY environment variable not set"
-
-    try:
-        client = anthropic.Anthropic(api_key=api_key)
-        response = client.messages.create(
-            model=model,
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.content[0].text
-    except Exception as e:
-        return f"Claude API error: {e}"
-
-def main():
-    parser = argparse.ArgumentParser(description="AI Helper - Interact with AI models")
-    parser.add_argument("prompt", help="Your prompt/question")
-    parser.add_argument("--model", choices=["openai", "claude", "both"], default="both", help="Which AI to use")
-
-    args = parser.parse_args()
-
-    print(f"🤖 AI Helper - Processing: {args.prompt}")
-    print("-" * 50)
-
-    if args.model in ["openai", "both"]:
-        print("📘 OpenAI Response:")
-        print(get_openai_response(args.prompt))
-        print()
-
-    if args.model in ["claude", "both"]:
-        print("🟣 Claude Response:")
-        print(get_claude_response(args.prompt))
-        print()
-
-if __name__ == "__main__":
-    main()
-EOF
-
-chmod +x ~/ai_helper.py
-
 # Install visualization packages
 log_info "📊 Installing visualization packages..."
 install_packages altair bokeh graphviz
@@ -293,168 +230,6 @@ c.ServerApp.open_browser = False
 c.ServerApp.allow_root = True
 c.ServerApp.allow_remote_access = True
 c.LabApp.default_url = '/lab'
-EOF
-
-# Create simple educational templates
-log_info "📚 Creating educational templates..."
-mkdir -p templates
-
-# Create a simple Python script template
-cat > templates/python_template.py << 'EOF'
-#!/usr/bin/env python3
-"""
-ABOUTME: Scientific Programming Python Script
-Author: [Your Name]
-Course: Scientific Programming 2025/26
-Date: [Date]
-
-Description: [Script description here]
-
-Learning Objectives:
-- [ ] Objective 1
-- [ ] Objective 2
-- [ ] Objective 3
-"""
-
-import sys
-import argparse
-from pathlib import Path
-
-# Add scientific imports as needed
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-
-def main():
-    """Main function for the script."""
-    parser = argparse.ArgumentParser(description="Scientific Programming Script")
-    parser.add_argument("--input", type=str, help="Input file path")
-    parser.add_argument("--output", type=str, help="Output file path")
-    parser.add_argument("--verbose", action="store_true", help="Verbose output")
-
-    args = parser.parse_args()
-
-    # Your code here
-    print("Scientific Programming Script")
-    print(f"Arguments: {args}")
-
-
-if __name__ == "__main__":
-    main()
-EOF
-
-# Create a simple sample data script
-cat > create_sample_data.py << 'EOF'
-#!/usr/bin/env python3
-"""
-ABOUTME: Create sample datasets for scientific programming exercises
-Author: Teaching Assistant
-Course: Scientific Programming 2025/26
-"""
-
-import numpy as np
-import pandas as pd
-import pathlib
-
-def create_student_grades():
-    """Create sample student grades dataset."""
-    np.random.seed(42)
-    n_students = 100
-
-    data = {
-        'student_id': range(1, n_students + 1),
-        'name': [f'Student_{i}' for i in range(1, n_students + 1)],
-        'assignment_1': np.random.normal(75, 15, n_students),
-        'assignment_2': np.random.normal(80, 12, n_students),
-        'midterm': np.random.normal(78, 18, n_students),
-        'final_exam': np.random.normal(82, 14, n_students),
-        'participation': np.random.uniform(60, 100, n_students)
-    }
-
-    df = pd.DataFrame(data)
-    return df
-
-def main():
-    """Create and save sample datasets."""
-    # Try to create data directory
-    data_dirs = ["~/data", "/workspaces/data", "data"]
-    data_dir = None
-
-    for dir_path in data_dirs:
-        expanded_path = pathlib.Path(dir_path).expanduser()
-        if expanded_path.exists() or expanded_path.mkdir(parents=True, exist_ok=True):
-            data_dir = expanded_path
-            break
-
-    if data_dir is None:
-        print("Could not create data directory")
-        return
-
-    # Create datasets
-    print("Creating student grades dataset...")
-    grades_df = create_student_grades()
-    grades_df.to_csv(data_dir / 'student_grades.csv', index=False)
-    print(f"Saved {len(grades_df)} student records to {data_dir / 'student_grades.csv'}")
-
-    print("Sample datasets created successfully!")
-
-if __name__ == "__main__":
-    main()
-EOF
-
-# Make Python scripts executable
-chmod +x create_sample_data.py templates/python_template.py
-
-# Generate sample data
-log_info "📊 Generating sample datasets..."
-python create_sample_data.py || log_warning "Sample data generation failed"
-
-# Create a simple README
-cat > README_devcontainer.md << 'EOF'
-# Scientific Programming Development Environment
-
-Welcome to your scientific programming development environment! This container provides everything you need for data analysis, visualization, and machine learning.
-
-## 🚀 Quick Start
-
-1. **Start Jupyter Lab:**
-   ```bash
-   jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
-   ```
-
-2. **Use Marimo for reactive notebooks:**
-   ```bash
-   marimo edit
-   ```
-
-3. **Run Python scripts:**
-   ```bash
-   python your_script.py
-   ```
-
-## 📦 Available Tools
-
-- **Jupyter Lab**: Interactive notebooks
-- **Marimo**: Reactive notebooks with AI integration
-- **Python**: Full scientific stack (NumPy, Pandas, Matplotlib, etc.)
-- **Development Tools**: Black, Flake8, MyPy, pytest
-
-## 📁 Directory Structure
-
-- `~/data/`: Your datasets and data files
-- `~/notebooks/`: Jupyter and Marimo notebooks
-- `~/templates/`: Code templates to get you started
-
-## 🆘 Need Help?
-
-If something doesn't work:
-1. Check the terminal output for error messages
-2. Try rebuilding the container
-3. Ask your instructor for assistance
-
-Happy coding! 🎉
 EOF
 
 log_success "✅ Scientific Programming Environment setup complete!"
