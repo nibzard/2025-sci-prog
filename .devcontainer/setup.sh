@@ -91,15 +91,25 @@ install_packages() {
     local packages=("$@")
     log_info "🔬 Installing packages: ${packages[*]}"
 
-    if [ "$UV_AVAILABLE" = true ]; then
-        # Use UV to install packages globally without project context
+    # Check if we have a virtual environment available
+    if [ -d ".venv" ] && [ "$UV_AVAILABLE" = true ]; then
+        # Use UV with virtual environment
         if uv pip install "${packages[@]}" --quiet; then
             log_success "Installed: ${packages[*]}"
         else
             log_warning "UV installation failed for some packages, trying pip..."
             python -m pip install "${packages[@]}" --quiet || log_warning "Some packages failed to install"
         fi
+    elif [ "$UV_AVAILABLE" = true ]; then
+        # Use UV with system-wide installation
+        if uv pip install "${packages[@]}" --system --quiet; then
+            log_success "Installed: ${packages[*]}"
+        else
+            log_warning "UV installation failed for some packages, trying pip..."
+            python -m pip install "${packages[@]}" --quiet || log_warning "Some packages failed to install"
+        fi
     else
+        # Use pip
         if python -m pip install "${packages[@]}" --quiet; then
             log_success "Installed: ${packages[*]}"
         else
@@ -132,9 +142,30 @@ if [ "$UV_AVAILABLE" = true ]; then
         # Ensure UV cache directory exists
         mkdir -p /tmp/uv-cache
 
+        # Create virtual environment if it doesn't exist
+        if [ ! -d ".venv" ]; then
+            log_info "📦 Creating UV virtual environment..."
+            uv venv --quiet || log_warning "Failed to create virtual environment"
+        fi
+
         # Run uv sync to install all project dependencies including marimo
         if uv sync --quiet; then
             log_success "Project dependencies installed successfully with uv sync"
+
+            # Activate the virtual environment in shell profiles
+            log_info "🔧 Activating virtual environment in shell profiles..."
+            echo "source $(pwd)/.venv/bin/activate" >> ~/.bashrc
+            echo "source $(pwd)/.venv/bin/activate" >> ~/.zshrc 2>/dev/null || true
+
+            # Also activate for current session
+            source .venv/bin/activate
+
+            # Test if marimo is available
+            if command -v marimo >/dev/null 2>&1; then
+                log_success "✅ Marimo is now available!"
+            else
+                log_warning "⚠️  Marimo installation may have failed - you may need to run 'source .venv/bin/activate' manually"
+            fi
         else
             log_warning "uv sync failed, trying alternative installation..."
             # Fallback: install marimo and other key dependencies directly
