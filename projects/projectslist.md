@@ -31,8 +31,8 @@ Please add your project using this format:
 
 ```markdown
 ### [Student Name]
-**Project:** [Tentative Project Title]
-**Description:** [One-line description of the project]
+* **Project:** [Tentative Project Title]
+* **Description:** [One-line description of the project]
 ```
 
 ---
@@ -40,16 +40,9 @@ Please add your project using this format:
 ## Current Projects
 
 ### John Doe
-**Project:** Data Analysis of Climate Change Patterns
-**Description:** Analyzing temperature and precipitation data using pandas and matplotlib to identify climate trends.
+* **Project:** Data Analysis of Climate Change Patterns
+* **Description:** Analyzing temperature and precipitation data using pandas and matplotlib to identify climate trends.
 
----
-
-## Project Structure Guidelines
-
-When you create your project folder (`projects/your-name/`), include:
-- `README.md` - Brief project description and setup instructions
-- Your Python scripts and data files
-- Any required `requirements.txt` file
-
-Happy coding! 🚀
+### Jane Doe
+* **Project:** Data Analysis of Climate Change Patterns
+* **Description:** Analyzing temperature and precipitation data using pandas and matplotlib to identify climate trends.
