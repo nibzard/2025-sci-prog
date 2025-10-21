@@ -46,3 +46,7 @@ Please add your project using this format:
 ### Jane Doe
 * **Project:** Data Analysis of Climate Change Patterns
 * **Description:** Analyzing temperature and precipitation data using pandas and matplotlib to identify climate trends.
+
+### Jozo Meštrović
+* **Project:** Portfolio Intelligence Dashboard
+* **Description:** Dashboard for tracking your positions in a portfolio. You can ask questions to the LLM that uses relevant data to give insights into the market.
