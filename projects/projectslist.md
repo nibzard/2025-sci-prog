@@ -46,3 +46,7 @@ Please add your project using this format:
 ### Jane Doe
 * **Project:** Data Analysis of Climate Change Patterns
 * **Description:** Analyzing temperature and precipitation data using pandas and matplotlib to identify climate trends.
+
+### Dražen Barić
+* **Project:** Nameless project
+* **Description:** Analyzing dependencies between time and individuals.
