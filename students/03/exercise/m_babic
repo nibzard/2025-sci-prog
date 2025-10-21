@@ -35,17 +35,18 @@ try:
     # 7. Make predictions for the existing fertilizer amounts
     existing_predictions = model.predict(X)
 
-
     # 8. Interpretation
     print(f"\nInterpretation:")
-    print(f"- For every 1 unit increase in fertilizer amount, crop yield increases by {model.coef_[0]:.2f}")
+    print(
+        f"- For every 1 unit increase in fertilizer amount, crop yield increases by {model.coef_[0]:.2f}")
     print(f"- The model explains {r2*100:.1f}% of the variance in crop yield")
     print(f"- Root Mean Square Error: {rmse:.2f}")
 
-
     # 9. Plot actual vs predicted
-    plt.scatter(df['fertilizer_amount'], df['crop_yield'], color='blue', label='Actual')
-    plt.plot(df['fertilizer_amount'], df['predicted_yield'], color='red', label='Regression Line')
+    plt.scatter(df['fertilizer_amount'], df['crop_yield'],
+                color='blue', label='Actual')
+    plt.plot(df['fertilizer_amount'], df['predicted_yield'],
+             color='red', label='Regression Line')
     plt.xlabel('Fertilizer Amount')
     plt.ylabel('Crop Yield')
     plt.title('Linear Regression: Crop Yield vs Fertilizer Amount')
