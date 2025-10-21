@@ -53,3 +53,7 @@ Please add your project using this format:
 ### Dražen Barić
 * **Project:** Nameless project
 * **Description:** Analyzing dependencies between time and individuals.
+
+### Mario Radoš
+* **Project:** Usporedba laptopa
+* **Description:** Usporedba ovisno o komponentama i performansama.
