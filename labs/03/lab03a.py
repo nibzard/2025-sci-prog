@@ -60,31 +60,6 @@ def _(df, sns):
 
 @app.cell
 def _(regr):
-    ### ERROR
-    import numpy as np
-    import matplotlib.pyplot as plt
-
-    plt.rcParams["figure.figsize"] = [7.00, 3.50]
-    plt.rcParams["figure.autolayout"] = True
-
-    x = np.linspace(-10, 10, 100)
-    y = np.linspace(-10, 10, 100)
-
-    x, y = np.meshgrid(x, y)
-    eq = regr.coef_[0] * x + regr.coef_[1] * y + regr.intercept_
-
-    fig = plt.figure()
-
-    ax = fig.gca(projection='3d')
-
-    ax.plot_surface(x, y, eq)
-
-    plt.show()
-    return (y,)
-
-
-@app.cell
-def _(regr):
     import numpy as np
     import matplotlib.pyplot as plt
     from mpl_toolkits.mplot3d import Axes3D
@@ -111,7 +86,6 @@ def _(regr):
 @app.cell
 def _(X, y):
     import statsmodels.api as sm
-
     model = sm.OLS(y, X).fit()
     print(model.summary())
     return
