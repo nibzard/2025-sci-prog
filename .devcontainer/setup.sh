@@ -226,6 +226,59 @@ setup_api_keys
 # Install Python-based AI SDKs for programmatic access
 install_packages openai anthropic google-generativeai llm 2>/dev/null || log_warning "Some AI SDKs failed to install"
 
+# Amp Code CLI (amp) install
+log_info "🧩 Checking for Amp Code CLI (amp)..."
+
+# Persist AMP_API_KEY if present
+if [ -n "$AMP_API_KEY" ]; then
+    echo "export AMP_API_KEY=\"$AMP_API_KEY\"" >> ~/.bashrc
+    echo "export AMP_API_KEY=\"$AMP_API_KEY\"" >> ~/.zshrc 2>/dev/null || true
+    log_success "AMP_API_KEY configured"
+else
+    log_warning "AMP_API_KEY not found - Amp Code features may be limited"
+fi
+
+install_amp_code_cli() {
+    # Skip if already installed
+    if command -v amp >/dev/null 2>&1; then
+        log_success "Amp Code CLI already installed"
+        return 0
+    fi
+
+    # Allow users to skip install explicitly
+    if [ "${AMP_SKIP_INSTALL:-0}" = "1" ]; then
+        log_warning "Skipping Amp Code CLI install due to AMP_SKIP_INSTALL=1"
+        return 0
+    fi
+
+    log_info "⬇️  Installing Amp Code CLI (see https://ampcode.com/manual for details)"
+
+    local installed=false
+
+    # Preferred: official installer script (if reachable)
+    if command -v curl >/dev/null 2>&1; then
+        if curl -fsSL https://ampcode.com/install.sh | bash >/dev/null 2>&1; then
+            installed=true
+        fi
+    fi
+
+    # Verify install
+    if [ "$installed" = true ] && command -v amp >/dev/null 2>&1; then
+        log_success "Amp Code CLI installed"
+        return 0
+    fi
+
+    # Fallback notice
+    log_warning "Amp Code CLI install not completed automatically."
+    log_info "Follow manual steps inside the container:"
+    echo "  1) Open https://ampcode.com/manual"
+    echo "  2) Run the documented install command (e.g., curl | bash)"
+    echo "  3) Verify with: amp --version"
+    return 0
+}
+
+install_amp_code_cli || true
+
 # Try to install common AI CLI tools (if npm available)
 if command -v npm >/dev/null 2>&1; then
     # Install Google Gemini CLI

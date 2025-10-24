@@ -41,6 +41,10 @@ Upon completion of this course, students will be able to:
 13. Code version management, integration and code optimization
 14. Basics of code parallelization in Unix shell and Python; scalability
 
+## Learning Resources
+
+1. [Practical Statistics for Data Scientists](https://github.com/gedeck/practical-statistics-for-data-scientists)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

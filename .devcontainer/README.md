@@ -77,6 +77,14 @@ Automated initialization script that:
 - **Anthropic**: Claude API access
 - **OpenAI**: GPT API access
 
+#### Amp Code CLI (optional)
+- Provides `amp` CLI for code automation.
+- The devcontainer passes through `AMP_API_KEY` from your local env and persists it.
+- Setup attempts automatic install; if not present, install inside the container using the official manual:
+  - Manual: https://ampcode.com/manual
+  - Example install: `curl -fsSL https://ampcode.com/install.sh | bash`
+  - Verify: `amp --version`
+
 ## 📂 Project Structure Created
 
 ```

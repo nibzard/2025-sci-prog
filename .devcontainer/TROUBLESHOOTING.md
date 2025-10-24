@@ -160,6 +160,11 @@ To use AI tools, you need API keys from the respective providers:
    - Get key from: https://makersuite.google.com/app/apikey
    - Set environment variable: `export GOOGLE_API_KEY="your-key-here"`
 
+4. **Amp Code**:
+   - Get key from your Amp account
+   - Set environment variable: `export AMP_API_KEY="your-key-here"`
+   - The container persists `AMP_API_KEY` to your shell profile
+
 ### Making API Keys Persistent
 
 To save your API keys so you don't have to set them every time:
@@ -187,6 +192,9 @@ npm install -g opencode-ai  # OpenCode AI CLI
 
 # Using pip
 pip install llm  # LLM CLI tool
+
+# Amp Code CLI (via official installer)
+curl -fsSL https://ampcode.com/install.sh | bash
 ```
 
 ### Direct CLI Usage
@@ -208,6 +216,10 @@ opencode "Review my code for improvements"
 
 # LLM CLI
 llm "What's the difference between AI and machine learning?"
+
+# Amp Code CLI
+amp --version
+amp help
 ```
 
 ### AI Usage Examples
