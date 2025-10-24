@@ -165,7 +165,6 @@ def analyze_and_compare_models(data, y_test, y_pred):
 @app.cell
 def _(data, y_pred, y_test):
     analyze_and_compare_models(data, y_test, y_pred)
-
     return
 
 
