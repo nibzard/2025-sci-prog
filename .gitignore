@@ -176,17 +176,6 @@ cython_debug/
 # Built Visual Studio Code Extensions
 *.vsix
 
-# Data files
-*.csv
-*.json
-*.xml
-*.xlsx
-*.xls
-*.hdf5
-*.h5
-*.pkl
-*.pickle
-
 # Exceptions for devcontainer
 !.devcontainer/devcontainer.json
 
