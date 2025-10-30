@@ -1,20 +1,21 @@
 # Project Registry
 
-This file lists all team projects for the Scientific Programming course. Students add their projects here via Pull Request.
+This file lists all individual projects for the Scientific Programming course. Students add their projects here via Pull Request.
 
 ## How to Add Your Project
 
 1. **Fork this repository**
-2. **Create your project folder** using format: `team_name-student1-student2/`
+2. **Create your project folder** using format: `projectname-student/`
 3. **Add your project** to the list below using the format
 4. **Submit a Pull Request** with your changes
 
 ## Project Entry Format
 
 ```markdown
-### [Team Name] - [Student 1] & [Student 2]
+### [Project Title] - [Student Name]
 * **Project:** [Project Title]
-* **Folder:** `team_name-student1-student2/`
+* **Student:** [Student Name]
+* **Folder:** `projectname-student/`
 * **Status:** [In Progress/Completed]
 * **Description:** [Brief one-line description]
 ```
@@ -23,17 +24,18 @@ This file lists all team projects for the Scientific Programming course. Student
 
 ## Current Projects
 
-*(Teams will add their projects here as they get started)*
+*(Students will add their projects here as they get started)*
 
-### Example Team - Alice Smith & Bob Johnson
+### Example Project - Nikola Balic
 * **Project:** Climate Data Analysis
-* **Folder:** `climate-analyzers-asmith-bjohnson/`
+* **Student:** Nikola Balic
+* **Folder:** `climate-analysis-nbalic/`
 * **Status:** In Progress
 * **Description:** Analyzing temperature trends using Python data science libraries.
 
 ---
 
-## Instructions for Teams
+## Instructions for Students
 
 1. **Create your project folder** with proper naming convention
 2. **Copy the README template** from an existing project folder
