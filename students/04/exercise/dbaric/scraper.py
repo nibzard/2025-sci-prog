@@ -117,9 +117,11 @@ def _(url_input, run_btn, os, requests, load_dotenv, genai):
                 "gemini-1.5-pro-latest",
             ]
             prompt = (
-                "Molimo sažmite sljedeći isječak web stranice na hrvatskom jeziku u 3 do 5 preglednih i informativnih bullet točaka. "
-                "Ako su navedeni datumi ili cijene, posebno ih istaknite. "
-                "Odgovor neka bude isključivo čist tekst s bullet točkama, bez upotrebe JSON formata, code blockova, uvodnih ili zaključnih rečenica.\n\n"
+                "Analiziraj sljedeći isječak web stranice i iznesi najvažnije, konkretne i unikatne informacije vezane isključivo uz sadržaj. "
+                "Izvuci činjenice koje donose jasnu vrijednost korisniku – npr. ključne novosti, specifične podatke, raritetne detalje, imena, datume, cijene, novo ili neočekivano u tekstu. "
+                "Odgovori jasno i sažeto koristeći 3 do 7 bullet točaka na hrvatskom jeziku. "
+                "Nemoj navoditi općenite informacije, izbjegavaj uvodne/zaključne rečenice, JSON, code blokove i parafraziranje već poznatih opisa stranice. "
+                "Navedi isključivo ono što je unikatno, korisno i specifično za ovaj isječak.\n\n"
                 "Isječak:\n" + excerpt
             )
             last_err = None
