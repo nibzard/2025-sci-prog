@@ -2,22 +2,35 @@
 
 This directory contains course projects completed in pairs, demonstrating practical applications of scientific programming concepts through collaborative development.
 
-## Pair Programming Structure
+## 🚀 Quick Start for Students
 
-All projects in this course are completed by teams of two students working together using modern software development practices.
+1. **View current projects**: Check [`PROJECT_LIST.md`](./PROJECT_LIST.md) to see what teams are working on
+2. **Find a partner**: Team up with another student (teams of 2)
+3. **Create your project folder**: Use format `team_name-student1-student2/`
+4. **Follow detailed instructions**: Copy README template from an existing project folder
 
-### Folder Naming Convention
+## 📁 Folder Structure
 
-Project folders follow the format: `team_name-student1-student2/`
+```
+projects/
+├── README.md           # This file - directory overview
+├── PROJECT_LIST.md     # Registry of all team projects
+└── [team-folders]/     # Individual team project folders
+    └── README.md       # Detailed instructions + project info
+```
 
-Examples:
-- `climate-analyzers-jdoe-msmith/`
-- `data-wizards-abrown-cjohnson/`
-- `python-gurus-dlee-jchen/`
+## 📋 Project Guidelines
 
-### Getting Started
+- **Pair programming**: All work done in teams of 2
+- **GitHub workflow**: Use forks, branches, and pull requests
+- **Modern practices**: Professional development workflows
+- **Detailed instructions**: Found in each project's README.md
 
-1. Read the `projectslist.md` file for detailed instructions
-2. Find a partner and decide on a team name
-3. Create your project folder using the naming convention above
-4. Follow the GitHub collaboration workflow outlined in projectslist.md
+## 📖 Documentation
+
+- **[`PROJECT_LIST.md`](./PROJECT_LIST.md)**: Complete project registry and submission instructions
+- **Project READMEs**: Detailed guidelines for pair programming, GitHub workflow, and requirements
+
+---
+
+**Need help?** Check an existing project folder for a complete README template with all instructions and guidelines.
