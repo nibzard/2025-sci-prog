@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.17.5"
 app = marimo.App(width="medium")
 
 
@@ -13,13 +13,14 @@ def _():
     from sklearn.model_selection import train_test_split
     from sklearn.linear_model import LinearRegression
     from sklearn import metrics
-    return LinearRegression, metrics, pd, plt, sns, train_test_split
+    import os
+    return LinearRegression, metrics, os, pd, plt, sns, train_test_split
 
 
 @app.cell
-def _(pd):
-    data = pd.read_csv("marketing.csv")
-    data.head()
+def _(os, pd):
+    os.chdir("/workspaces/2025-sci-prog/labs/03/")
+    data = pd.read_csv('marketing.csv')
     return (data,)
 
 
