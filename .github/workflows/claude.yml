@@ -25,10 +25,31 @@ jobs:
       id-token: write
       actions: read # Required for Claude to read CI results on PRs
     steps:
+      - name: Get PR details from issue comment
+        id: pr
+        if: github.event.issue.pull_request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.issue.number;
+
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: issue_number,
+            });
+
+            core.setOutput('pr_number', issue_number);
+            core.setOutput('head_sha', pr.data.head.sha);
+            core.setOutput('head_ref', pr.data.head.ref);
+            core.setOutput('base_ref', pr.data.base.ref);
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          ref: ${{ steps.pr.outputs.head_sha || github.sha }}
+          fetch-depth: 0
 
       - name: Run Claude Code
         id: claude
@@ -46,5 +67,5 @@ jobs:
           # Optional: Add claude_args to customize behavior and configuration
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://docs.claude.com/en/docs/claude-code/cli-reference for available options
-          # claude_args: '--allowed-tools Bash(gh pr:*)'
+          claude_args: '--allowedTools "Bash(gh issue view:*),Bash(gh search:*),Bash(gh issue list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr reviews:*)"'
 
