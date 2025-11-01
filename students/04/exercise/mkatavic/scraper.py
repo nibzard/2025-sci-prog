@@ -16,7 +16,7 @@ def _():
 @app.cell
 def _():
     import marimo as _mo
-
+    
     _mo.md("# 🔑 API Keys Configuration")
     return
 
@@ -24,20 +24,19 @@ def _():
 @app.cell
 def _(load_dotenv, os):
     import marimo as _mo
-
+    
     # Try to load from .env first
     from pathlib import Path
     load_dotenv()
     try:
-        load_dotenv(dotenv_path=Path(
-            __file__).with_name(".env"), override=False)
+        load_dotenv(dotenv_path=Path(__file__).with_name(".env"), override=False)
     except Exception:
         pass
-
+    
     # Get values from .env or empty string
     steel_default = os.getenv("STEEL_API_KEY", "")
     google_default = os.getenv("GOOGLE_API_KEY", "")
-
+    
     # Create input fields
     steel_input = _mo.ui.text(
         label="Steel API Key",
@@ -45,14 +44,14 @@ def _(load_dotenv, os):
         value=steel_default,
         kind="password"
     )
-
+    
     google_input = _mo.ui.text(
         label="Google AI API Key",
         placeholder="AIzaSy...",
         value=google_default,
         kind="password"
     )
-
+    
     _mo.vstack([
         _mo.md("Unesite API ključeve (ili će se automatski učitati iz .env):"),
         steel_input,
@@ -64,7 +63,7 @@ def _(load_dotenv, os):
 @app.cell
 def _():
     import marimo as _mo
-
+    
     _mo.md("---\n\n# 📰 Scraper Configuration")
     return
 
@@ -205,13 +204,12 @@ def _(genai, requests, run_btn, url_input, steel_input, google_input):
         # Get keys from input fields
         steel_key = steel_input.value.strip()
         google_key = google_input.value.strip()
-
+        
         url = (url_input.value or "").strip()
         if not url:
             view = _mo.md("❌ Molimo unesite URL.")
         elif not steel_key or not google_key:
-            view = _mo.md(
-                f"❌ Missing API keys!\n\nSteel key present: {bool(steel_key)}\n\nGoogle key present: {bool(google_key)}\n\n**Molimo unesite oba API ključa u polja iznad.**")
+            view = _mo.md(f"❌ Missing API keys!\n\nSteel key present: {bool(steel_key)}\n\nGoogle key present: {bool(google_key)}\n\n**Molimo unesite oba API ključa u polja iznad.**")
         else:
             view = _mo.md("⏳ Dohvaćam stranicu sa Steel API...")
             steel_text = steel_fetch_text(url, steel_key)
@@ -229,7 +227,7 @@ def _(genai, requests, run_btn, url_input, steel_input, google_input):
                 llm_out = gemini_analyze_hn(
                     steel_text, google_key) if steel_text else "(nema teksta)"
 
-                view = _mo.md(
+                results_text = (
                     f"# 📰 Hacker News Scraper Rezultati\n\n"
                     f"**Scraped URL:** `{url}`\n\n"
                     f"---\n\n"
@@ -241,6 +239,19 @@ def _(genai, requests, run_btn, url_input, steel_input, google_input):
                     f"---\n\n"
                     f"*Duljina ukupnog teksta: {len(steel_text)} znakova*"
                 )
+                
+                # Create download button for Markdown
+                download_btn = _mo.download(
+                    data=results_text.encode('utf-8'),
+                    filename="hacker_news_results.md",
+                    mimetype="text/markdown",
+                    label="⬇️ Download Results as Markdown"
+                )
+                
+                view = _mo.vstack([
+                    _mo.md(results_text),
+                    download_btn
+                ])
 
     view
     return steel_fetch_text, gemini_analyze_hn, view
