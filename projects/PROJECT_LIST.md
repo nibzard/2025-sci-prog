@@ -25,6 +25,13 @@ This file lists all individual projects for the Scientific Programming course. S
 
 ## Current Projects
 
+### Medical Insurance Cost - Martina Lovrić
+* **Project:** Medical Insurance Cost Prediction
+* **Student:** Martina Lovrić
+* **Folder:** `projects/mlovric-insurancecost`
+* **Status:** In Progress
+* **Description:** Developing a regression-based model to estimate individual medical insurance costs based on demographic and lifestyle attributes (age, BMI, smoker status, children, region). Includes data cleaning, exploratory analysis, feature engineering, model training and evaluation.
+
 ### Location Prediction - Marija Karoglan
 * **Project:** Location Prediction
 * **Student:** Marija Karoglan
