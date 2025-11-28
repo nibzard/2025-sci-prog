@@ -326,25 +326,32 @@ The course is divided into two main phases:
 
 ---
 
-### Week 12: Introduction to Large Language Models
-**Lecture 12: LLM Fundamentals and Fine-Tuning**
+### Week 12: Custom LLM Training and Fine-Tuning
+**Lecture 12: Training Custom Language Models with Tinker**
 
 **Topics:**
 - Large Language Model (LLM) architecture overview
-- Pre-training vs fine-tuning
+- Pre-training vs fine-tuning fundamentals
 - Transfer learning for NLP
 - Transformer architecture basics
-- Introduction to model customization
-- Use cases for custom LLMs
+- LoRA (Low-Rank Adaptation) and parameter-efficient fine-tuning
+- Supervised learning for LLMs
+- Reinforcement Learning from Human Feedback (RLHF)
+- System prompts vs fine-tuning trade-offs
 - Cost-benefit analysis of custom models
-- Model ownership and vendor risk
+- Model ownership and vendor risk mitigation
 
-**Lab 05 Part 1: Introduction to Tinker Training API**
-- Overview of Tinker Training API
-- Understanding LoRA (Low-Rank Adaptation)
-- Parameter-efficient fine-tuning concepts
-- Synthetic data generation strategies
-- Tool-using agents and structured RAG
+**Lab 05: Training Custom Language Models with Tinker**
+- Synthetic data generation and tool-using agents
+- Structured RAG vs traditional embeddings
+- Tinker Training API fundamentals
+- Implementing LoRA-based fine-tuning
+- Working with Tinker Cookbook recipes
+- Fine-tuning models for specific domains
+- Reinforcement learning workflows and reward functions
+- Evaluating custom model performance
+- Cost optimization strategies
+- Deployment and iteration on custom models
 
 **Project Work:**
 - Advanced feature engineering
@@ -352,38 +359,45 @@ The course is divided into two main phases:
 - Initial results analysis
 
 **Deliverables:**
-- LLM fundamentals quiz/assignment
+- Complete Lab 05 exercises
 - Project progress report (methods, preliminary results)
 
 ---
 
-### Week 13: Advanced LLM Training Techniques
-**Lecture 13: Custom Model Training and Optimization**
+### Week 13: Advanced AI Engineering and Cognitive Architectures
+**Lecture 13: State-of-the-Art AI Engineering (2025)**
 
 **Topics:**
-- Supervised learning for LLMs
-- Reinforcement Learning from Human Feedback (RLHF)
-- System prompts vs fine-tuning trade-offs
-- Evaluation strategies for custom models
-- Distributed training with Prime Intellect
-- Model deployment considerations
-- Privacy and compliance in model training
-- Building competitive moats with custom models
+- The AI paradigm shift: From models to harnesses
+- The infinite software crisis and code verification bottlenecks
+- Cognitive architectures for managing context and complexity
+- Context compaction and the "dumb zone" problem
+- From general agents to modular skills
+- Agent Reinforcement Fine-Tuning (RFT) methodology
+- System prompt optimization techniques
+- Efficient asynchronous pipeline RL
+- Code world models: Predicting execution traces vs syntax
+- The benchmark paradox and dynamic evaluations
+- Reward hacking and adversarial graders
+- Future of AI-powered development environments
 
-**Lab 05 Part 2: Hands-on LLM Fine-Tuning with Tinker**
-- Working with Tinker Cookbook recipes
-- Fine-tuning models for specific domains
-- Evaluating custom model performance
-- Cost optimization strategies
-- Practical applications and case studies
+**Lab 06: Prompt Optimization with Gemini**
+- Understanding the judge vs student model paradigm
+- Using expensive models to optimize prompts for cheap models
+- Automated prompt optimization workflows
+- LLM-as-a-Judge critique and iteration
+- Practical exercises: Structured data extraction, code review classification, technical translation
+- Cost-benefit analysis of prompt optimization
+- Hands-on: Optimizing Gemini 2.5 Flash-Lite prompts using Gemini 3 Pro
 
 **Project Work:**
 - Final model training and validation
+- Advanced optimization techniques
 - Documentation preparation
 - Results visualization and interpretation
 
 **Deliverables:**
-- Complete Lab 05 exercises
+- Complete Lab 06 exercises (prompt optimization)
 - Project draft documentation
 
 ---
@@ -457,19 +471,20 @@ The course is divided into two main phases:
 
 | Component | Weight | Description |
 |-----------|--------|-------------|
-| **Laboratory Exercises** | 35% | Labs 01-05 completion and quality |
-| **Weekly Assignments** | 15% | Programming exercises and problem sets |
+| **Laboratory Exercises** | 40% | Labs 01-06 completion and quality |
+| **Weekly Assignments** | 10% | Programming exercises and problem sets |
 | **Final Project** | 40% | Individual research project |
 | **Project Presentation** | 10% | Final presentation and demo |
 | **Total** | 100% | |
 
-### Laboratory Exercises (35%)
+### Laboratory Exercises (40%)
 
 - **Lab 01:** Introduction to Scientific Programming (5%)
 - **Lab 02:** Data Manipulation and Analysis (5%)
 - **Lab 03:** Linear Regression and Statistical Analysis (10%)
 - **Lab 04:** Web Scraping and AI-Powered Content Analysis (10%)
 - **Lab 05:** Training Custom Language Models with Tinker (5%)
+- **Lab 06:** Advanced AI Engineering and Prompt Optimization (5%)
 
 ### Final Project Requirements (40%)
 
@@ -671,8 +686,8 @@ The course is divided into two main phases:
 | 9 | Data Visualization | Matplotlib/Seaborn exercises | Data Collection & EDA |
 | 10 | Web Scraping and APIs | Lab 04: Web Scraping | Dataset Compilation |
 | 11 | Machine Learning with Scikit-Learn | ML model implementation | Baseline Model |
-| 12 | LLM Fundamentals | Lab 05 Part 1: Tinker Intro | Progress Report |
-| 13 | Advanced LLM Training | Lab 05 Part 2: Fine-Tuning | Final Model Training |
+| 12 | Custom LLM Training with Tinker | Lab 05: Fine-Tuning & RLHF | Progress Report |
+| 13 | Advanced AI Engineering & Cognitive Architectures | Lab 06: Prompt Optimization | Final Model Training |
 | 14 | Code Optimization & Parallelization | Git workflow & optimization | Code & Documentation |
 | 15 | Project Presentations | Final presentations | **Final Submission** |
 
@@ -688,7 +703,7 @@ The course is divided into two main phases:
 
 This syllabus may be updated during the semester to reflect changes in schedule, topics, or requirements. All updates will be announced in class and posted to the course repository.
 
-**Last Updated:** November 14, 2025
+**Last Updated:** November 28, 2025
 
 ---
 
