@@ -1,0 +1,52 @@
+import google.generativeai as genai
+from google.colab import userdata
+#
+GOOGLE_API_KEY=userdata.get('GEMINI_API_KEY')
+genai.configure(api_key=GOOGLE_API_KEY)
+
+gemini_model_thinking = genai.GenerativeModel('gemini-2.5-pro')
+gemini_model_lite = genai.GenerativeModel('gemini-2.0-flash-lite')
+
+import json, re
+
+def prompt_optim(prompt, output):
+    instruction = f'''
+    You are a prompt-optimizer. Improve the prompt given the model output. Make your response short, direct and effective.
+    Return ONLY a JSON object with fields:
+    - optimized_prompt
+    - feedback
+    - rationale
+
+    Prompt: "{prompt}"
+    Output: "{output}"
+    '''
+
+    response = gemini_model_thinking.generate_content(instruction)
+    raw = response.text
+
+    m = re.search(r"```json\n([\s\S]*?)\n```", raw)
+    if m:
+        data = json.loads(m.group(1))
+    else:
+        data = json.loads(raw)
+
+    return data
+
+def run_optim(prompt, iterations=5):
+    current = prompt
+    for i in range(1, iterations + 1):
+        print(f"===== ITERATION {i} =====")
+        print("Prompt:", current)
+
+        lite_output = gemini_model_lite.generate_content(current).text
+        print("Lite Output:", lite_output)
+
+        result = prompt_optim(current, lite_output)
+        print("Feedback:", result['feedback'])
+        print("Rationale:", result['rationale'])
+        print("Optimized Prompt:", result['optimized_prompt'])
+        print()
+
+        current = result['optimized_prompt']
+
+    return current
