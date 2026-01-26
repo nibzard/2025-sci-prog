@@ -1,10 +1,11 @@
-ai4free @ git+https://github.com/Devs-Do-Code/ai4free.git@a002ce564327e62523f56f4f5084177e81e845c1
+ai4free==0.7
 aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.13.2
 aiosignal==1.4.0
 annotated-types==0.7.0
 anyio==4.11.0
+asttokens==3.0.1
 attrs==25.4.0
 beautifulsoup4==4.14.2
 brotli==1.2.0
@@ -12,6 +13,7 @@ cachetools==6.2.2
 certifi==2025.11.12
 cffi==2.0.0
 charset-normalizer==3.4.4
+chess==1.11.2
 click==8.3.1
 cloudscraper==1.2.71
 cohere==5.20.0
@@ -20,6 +22,7 @@ curl_cffi==0.13.0
 Deprecated==1.3.1
 distro==1.9.0
 dotenv==0.9.9
+executing==2.2.1
 fastavro==1.12.1
 filelock==3.20.0
 frozenlist==1.8.0
@@ -33,6 +36,7 @@ google-auth-httplib2==0.2.1
 google-generativeai==0.8.5
 googleapis-common-protos==1.72.0
 gradio_client==1.13.3
+groq==1.0.0
 grpcio==1.76.0
 grpcio-status==1.71.2
 h11==0.16.0
@@ -46,6 +50,7 @@ httpx-sse==0.4.0
 huggingface_hub==1.1.4
 idna==3.11
 jiter==0.12.0
+litprinter==0.3.3
 litproxy==0.2.1
 lxml==6.0.2
 markdown-it-py==4.0.0
@@ -56,7 +61,7 @@ mss==10.1.0
 multidict==6.7.0
 nest-asyncio==1.6.0
 nodriver==0.48.1
-openai==2.8.1
+openai==1.30.1
 orjson==3.11.4
 outcome==1.3.0.post0
 packaging==25.0
