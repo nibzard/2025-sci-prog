@@ -1,0 +1,7 @@
+,abs_error_normal,abs_error_normal,abs_error_normal,abs_error_long,abs_error_long,abs_error_long,abs_error_ensemble,abs_error_ensemble,abs_error_ensemble
+,mean,median,std,mean,median,std,mean,median,std
+segment,,,,,,,,,
+Very Short,183.66,144.87,182.15,4353.96,4308.91,352.89,183.66,144.87,182.15
+Short,519.4,422.1,416.52,2867.32,2905.49,544.09,519.4,422.1,416.52
+Medium,855.31,977.49,447.6,2149.91,2213.18,779.64,855.31,977.49,447.6
+Long,4449.87,2475.95,6007.57,2557.41,1281.76,3577.98,2674.3,1392.4,3523.33
