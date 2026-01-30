@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "gemini"]
+[Black "groq"]
+[Result "1/2-1/2"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Ng4 4. Nd3 Nf6 5. Ne5 Nxe4 6. Nd3 g5 7. Ne5 Nf6 8. Nd3 Ng4 9. Ne5 Ke7 10. Nd3 f6 11. Ne5 fxe5 12. Bd3 Ke6 13. Bg6 d6 14. Bf7+ Kf5 15. Be8 Ke4 16. Bg6+ Kd5 17. Bf7+ Kd4 18. Be8 Qe7 19. Bg6 Qe6 20. Bf7 Qd5 21. Be6 e4 22. Bf5 Qe5 23. Be6 Qxe6 24. Rf1 Qf6 25. Rh1 Qe7 26. Na3 Qe6 27. Ke2 Qf6 28. Nb5+ Kc5 29. Nxc7 Qe7 30. Ne8 Qf6 31. Ng7 Qe7 32. Ne6+ Kc6 33. Nd8+ Kd5 34. Nf7 Qe6 35. Nxh8 Qe7 36. Nf7 Qe6 37. Nh8 Qe7 38. Nf7 Qe6 1/2-1/2
+

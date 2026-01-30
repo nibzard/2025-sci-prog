@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "gemini"]
+[Black "youchat"]
+[Result "1/2-1/2"]
+
+1. e4 e5 2. Nf3 Be7 3. Nxe5 Nf6 4. Nd3 O-O 5. Ne5 Re8 6. Nd3 Bd6 7. Ne5 Re7 8. Nd3 Re5 9. Nxe5 Qe8 10. Nd3 Qe7 11. Ne5 Qxe5 12. Bd3 Ne8 13. Bc4 Qe6 14. Bxe6 Be5 15. Bd5 Kh8 16. d4 d6 17. Bxf7 Bxd4 18. f4 Bc3+ 19. Kf2 Bd7 20. f5 Bc6 21. Bxe8 d5 22. Bg6 d4 23. Be8 d3 24. Bg6 dxc2 25. Be8 Bd7 26. Bg6 cxd1=Q 27. Bf7 Qd4+ 28. Kf3 Qd3+ 29. Kf4 Qd4 30. Be8 Qd3 31. Bg6 Qd4 32. Bf7 Qxe4+ 33. Kg5 Qe5 34. Be6 Qd6 35. Bd5 Qxd5 36. Kh5 Qd4 37. Kg5 Qd1 38. b4 Bc6 39. Kf4 Qd8 40. Ke3 Qd3+ 41. Kf4 Qd4+ 42. Kg3 Qd3+ 43. Kf4 Qd4+ 44. Kg3 Qd1 45. Kf4 1/2-1/2
+

@@ -1,0 +1,338 @@
+{
+    "agents": [
+        "gemini",
+        "cohere",
+        "groq",
+        "reka",
+        "youchat"
+    ],
+    "schedule": [
+        {
+            "id": 0,
+            "white": "gemini",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_cohere_20260128151848.pgn"
+        },
+        {
+            "id": 1,
+            "white": "gemini",
+            "black": "groq",
+            "played": true,
+            "result": "0-1",
+            "pgn_filename": "gamedata/pgns/gemini_vs_groq_20260128153558.pgn"
+        },
+        {
+            "id": 2,
+            "white": "gemini",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_reka_20260128160139.pgn"
+        },
+        {
+            "id": 3,
+            "white": "gemini",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_youchat_20260128160619.pgn"
+        },
+        {
+            "id": 4,
+            "white": "cohere",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_gemini_20260128213149.pgn"
+        },
+        {
+            "id": 5,
+            "white": "cohere",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_groq_20260128223303.pgn"
+        },
+        {
+            "id": 6,
+            "white": "cohere",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_reka_20260128230548.pgn"
+        },
+        {
+            "id": 7,
+            "white": "cohere",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_youchat_20260128232326.pgn"
+        },
+        {
+            "id": 8,
+            "white": "groq",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_gemini_20260128234132.pgn"
+        },
+        {
+            "id": 9,
+            "white": "groq",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_cohere_20260129004745.pgn"
+        },
+        {
+            "id": 10,
+            "white": "groq",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_reka_20260129010248.pgn"
+        },
+        {
+            "id": 11,
+            "white": "groq",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_youchat_20260129014357.pgn"
+        },
+        {
+            "id": 12,
+            "white": "reka",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_gemini_20260129020457.pgn"
+        },
+        {
+            "id": 13,
+            "white": "reka",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_cohere_20260129021624.pgn"
+        },
+        {
+            "id": 14,
+            "white": "reka",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_groq_20260129025747.pgn"
+        },
+        {
+            "id": 15,
+            "white": "reka",
+            "black": "youchat",
+            "played": true,
+            "result": "0-1",
+            "pgn_filename": "gamedata/pgns/reka_vs_youchat_20260129034950.pgn"
+        },
+        {
+            "id": 16,
+            "white": "youchat",
+            "black": "gemini",
+            "played": true,
+            "result": "1-0",
+            "pgn_filename": "gamedata/pgns/youchat_vs_gemini_20260129041139.pgn"
+        },
+        {
+            "id": 17,
+            "white": "youchat",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_cohere_20260129042804.pgn"
+        },
+        {
+            "id": 18,
+            "white": "youchat",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_groq_20260129045005.pgn"
+        },
+        {
+            "id": 19,
+            "white": "youchat",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_reka_20260129050510.pgn"
+        },
+        {
+            "id": 20,
+            "white": "gemini",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_cohere_20260129053029.pgn"
+        },
+        {
+            "id": 21,
+            "white": "gemini",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_groq_20260129054339.pgn"
+        },
+        {
+            "id": 22,
+            "white": "gemini",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_reka_20260129062702.pgn"
+        },
+        {
+            "id": 23,
+            "white": "gemini",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/gemini_vs_youchat_20260129073731.pgn"
+        },
+        {
+            "id": 24,
+            "white": "cohere",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_gemini_20260129082458.pgn"
+        },
+        {
+            "id": 25,
+            "white": "cohere",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_groq_20260129084246.pgn"
+        },
+        {
+            "id": 26,
+            "white": "cohere",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/cohere_vs_reka_20260129090356.pgn"
+        },
+        {
+            "id": 27,
+            "white": "cohere",
+            "black": "youchat",
+            "played": true,
+            "result": "0-1",
+            "pgn_filename": "gamedata/pgns/cohere_vs_youchat_20260129091927.pgn"
+        },
+        {
+            "id": 28,
+            "white": "groq",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_gemini_20260129092932.pgn"
+        },
+        {
+            "id": 29,
+            "white": "groq",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_cohere_20260129093920.pgn"
+        },
+        {
+            "id": 30,
+            "white": "groq",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_reka_20260129100437.pgn"
+        },
+        {
+            "id": 31,
+            "white": "groq",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/groq_vs_youchat_20260129140511.pgn"
+        },
+        {
+            "id": 32,
+            "white": "reka",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_gemini_20260129145356.pgn"
+        },
+        {
+            "id": 33,
+            "white": "reka",
+            "black": "cohere",
+            "played": true,
+            "result": "1-0",
+            "pgn_filename": "gamedata/pgns/reka_vs_cohere_20260129151915.pgn"
+        },
+        {
+            "id": 34,
+            "white": "reka",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_groq_20260129153043.pgn"
+        },
+        {
+            "id": 35,
+            "white": "reka",
+            "black": "youchat",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/reka_vs_youchat_20260129154542.pgn"
+        },
+        {
+            "id": 36,
+            "white": "youchat",
+            "black": "gemini",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_gemini_20260129162139.pgn"
+        },
+        {
+            "id": 37,
+            "white": "youchat",
+            "black": "cohere",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_cohere_20260129200102.pgn"
+        },
+        {
+            "id": 38,
+            "white": "youchat",
+            "black": "groq",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_groq_20260129204020.pgn"
+        },
+        {
+            "id": 39,
+            "white": "youchat",
+            "black": "reka",
+            "played": true,
+            "result": "1/2-1/2",
+            "pgn_filename": "gamedata/pgns/youchat_vs_reka_20260129215146.pgn"
+        }
+    ],
+    "scores": {
+        "gemini": 7.0,
+        "cohere": 7.0,
+        "groq": 8.5,
+        "reka": 8.0,
+        "youchat": 9.5
+    }
+}

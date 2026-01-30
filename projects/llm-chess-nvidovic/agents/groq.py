@@ -5,7 +5,7 @@ class GroqAgent:
 
     """Agent which uses Groq API to generate chess moves."""
     def __init__(self, api_key=None):
-        self.groq = GROQ(api_key=api_key, model="llama-3.1-8b-instant") # openai/gpt-oss-20b
+        self.groq = GROQ(api_key=api_key, model="llama-3.3-70b-versatile") # openai/gpt-oss-20b
         
     def get_move(self, fen: str, color: str, forced_prompt: str = None, player_name: str = None) -> str:
         try:
