@@ -1,0 +1,362 @@
+[
+    {
+        "day": -1,
+        "event_id": "PERS_SLEEP_POOR_01",
+        "scope": "personal",
+        "text": "You slept poorly and feel slightly irritable today.",
+        "tags": [
+            "sleep",
+            "irritation"
+        ],
+        "severity": 0.5,
+        "polarity": "negative",
+        "frequency_weight": 1.0,
+        "cooldown_days": 5,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "patience_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SLEEP_GOOD_01",
+        "scope": "personal",
+        "text": "You slept well and feel more clear-headed than usual.",
+        "tags": [
+            "sleep",
+            "energy"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 0.8,
+        "cooldown_days": 5,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_LOW_ENERGY_01",
+        "scope": "personal",
+        "text": "You feel low on energy without a clear reason.",
+        "tags": [
+            "energy",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.9,
+        "cooldown_days": 3,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "arousal_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_EXTRA_ENERGY_01",
+        "scope": "personal",
+        "text": "You feel slightly more energetic than usual today.",
+        "tags": [
+            "energy",
+            "mood"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 4,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "arousal_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SMALL_EXPENSE_01",
+        "scope": "personal",
+        "text": "An unexpected small expense causes mild financial annoyance.",
+        "tags": [
+            "money",
+            "stress"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.8,
+        "cooldown_days": 7,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_BUDGET_RELIEF_01",
+        "scope": "personal",
+        "text": "You realize your budget is slightly more comfortable than expected.",
+        "tags": [
+            "money",
+            "relief"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_TIME_PRESSURE_01",
+        "scope": "personal",
+        "text": "You feel mildly pressed for time throughout the day.",
+        "tags": [
+            "time",
+            "pressure"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_fragmentation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_FREE_TIME_01",
+        "scope": "personal",
+        "text": "You unexpectedly have a bit of free time today.",
+        "tags": [
+            "time",
+            "relief"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.7,
+        "cooldown_days": 4,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SOCIAL_TENSION_01",
+        "scope": "personal",
+        "text": "A slightly awkward social interaction lingers in your mind.",
+        "tags": [
+            "social",
+            "stress"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 8,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SOCIAL_WARMTH_01",
+        "scope": "personal",
+        "text": "A friendly interaction leaves you feeling mildly uplifted.",
+        "tags": [
+            "social",
+            "mood"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "mood_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_HEALTH_NAG_01",
+        "scope": "personal",
+        "text": "A minor physical discomfort slightly distracts you.",
+        "tags": [
+            "health",
+            "discomfort"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.7,
+        "cooldown_days": 7,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "attention_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_HEALTH_GOOD_01",
+        "scope": "personal",
+        "text": "You feel physically well and comfortable today.",
+        "tags": [
+            "health",
+            "wellbeing"
+        ],
+        "severity": 0.2,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_MOTIVATION_LOW_01",
+        "scope": "personal",
+        "text": "You feel less motivated to engage deeply with new things.",
+        "tags": [
+            "motivation",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "interest_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_MOTIVATION_HIGH_01",
+        "scope": "personal",
+        "text": "You feel quietly motivated to explore or try something new.",
+        "tags": [
+            "motivation",
+            "curiosity"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 8,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "novelty_seeking_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_DISTRACTED_01",
+        "scope": "personal",
+        "text": "Your attention feels scattered across many small thoughts.",
+        "tags": [
+            "attention",
+            "distraction"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.8,
+        "cooldown_days": 4,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_fragmentation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_FOCUSED_01",
+        "scope": "personal",
+        "text": "You feel unusually focused and mentally organized.",
+        "tags": [
+            "attention",
+            "focus"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_BOREDOM_01",
+        "scope": "personal",
+        "text": "You feel a mild sense of boredom during idle moments.",
+        "tags": [
+            "boredom",
+            "mood"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.9,
+        "cooldown_days": 3,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "novelty_seeking_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_CONTENT_01",
+        "scope": "personal",
+        "text": "You feel generally content without strong emotions either way.",
+        "tags": [
+            "mood",
+            "baseline"
+        ],
+        "severity": 0.2,
+        "polarity": "neutral",
+        "frequency_weight": 0.6,
+        "cooldown_days": 5,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "emotional_stability"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SELF_REFLECT_01",
+        "scope": "personal",
+        "text": "You find yourself mildly reflective about recent choices.",
+        "tags": [
+            "reflection",
+            "mood"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.5,
+        "cooldown_days": 9,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "deliberation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "PERS_SMALL_WIN_01",
+        "scope": "personal",
+        "text": "A small personal win gives you a brief confidence boost.",
+        "tags": [
+            "confidence",
+            "mood"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 7,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "confidence_up"
+        ]
+    }
+]

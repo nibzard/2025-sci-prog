@@ -1,0 +1,17 @@
+requests
+duckdb
+numpy
+pandas
+python-dotenv
+marimo
+pyyaml
+ipython
+scikit-learn
+google-generativeai
+streamlit
+pydantic
+pydantic-settings
+pytest
+pytest-cov
+playwright
+google-search-results

@@ -1,0 +1,52 @@
+user_id,gender,age,profession,hobby,family
+73,m,19,['writer'],"['arts','video games','creative writing','blogging','reading fiction','poetry','journaling']",n
+149,m,33,['journeyman'],"['walking','travel','photography','local history','cycling','nature watching']",y
+201,m,24,['carpenter'],"['listening to music','video games','wood carving','DIY projects','furniture design','handcrafts']",n
+305,m,18,['buyer'],"['walking','reading','personal finance','market analysis','podcasts','note taking']",y
+322,f,21,['designer'],"['soccer','travel','reading','graphic design','sketching','photography','museum visits']",y
+323,f,16,['software developer'],"['video games','computers','coding side projects','game modding','logic puzzles','tech blogs']",y
+324,f,21,['college student'],"['reading','reading fiction','note taking','study groups','journaling','literary discussions']",y
+332,f,21,['college student'],"['video games','streaming','esports watching','game reviews','casual coding','online communities']",y
+345,f,26,['magician'],"['snowboarding','video games','sleight of hand','card tricks','performance practice','theater']",y
+362,f,16,['lawyer'],"['video games','basketball','drawing','debate','mock trials','creative writing']",n
+434,m,21,['photographer'],"['puzzles','cooking','photo editing','urban exploration','food photography','travel blogging']",y
+447,m,16,['musician'],"['reading','writing','songwriting','music theory','listening to albums','poetry']",y
+517,m,14,['college student'],"['reading','writing','creative essays','journaling','language learning','storytelling']",n
+565,f,60,['hunter'],"['video games','writing','nature journaling','wildlife tracking','outdoor photography','history reading']",y
+581,f,21,['fisherman'],"['eating out','video games','food reviews','cooking seafood','travel vlogging','casual photography']",y
+717,f,15,['executive'],"['video games','guitar','music practice','song covers','time management','leadership reading']",y
+727,m,24,['consultant'],"['travel','camping','hiking','productivity systems','business podcasts','journaling']",y
+730,f,16,['hunter'],"['video games','shoes','outdoor survival','gear collecting','nature walks','fashion styling']",y
+744,f,27,['college student'],"['longboarding','football','fitness training','sports analytics','stretching','healthy cooking']",y
+749,f,13,['baker'],"['video games','hiking','cake decorating','recipe testing','food photography','nature walks']",n
+755,m,21,['mayor'],"['travel','camping','hiking','public speaking','policy reading','community events']",y
+786,f,29,['doctor'],"['reading','reading fiction','medical journals','yoga','mindfulness','health writing']",n
+812,m,21,['artist'],"['shooting','fishing','sketching','nature painting','outdoor photography','field journaling']",n
+818,f,16,['hunter'],"['video games','drawing','character design','digital art','nature sketching','creative coloring']",y
+835,m,16,['driver'],"['writing','writing music','guitar','song arranging','home recording','music journaling']",n
+847,m,27,['scientist'],"['travel','research blogging','science podcasts','data visualization','conference networking']",y
+898,m,20,['officer'],"['painting','drawing','figure studies','urban sketching','museum visits','art history']",y
+909,m,19,['scientist'],"['birding','running','nature journaling','wildlife photography','trail mapping','fitness tracking']",y
+942,m,28,['trombonist'],"['curling','reading','music arrangement','ensemble practice','concert reviews','music theory']",y
+912,m,35,['engineer'],"['astronomy','stargazing','telescope building','science reading','night photography','space podcasts']",y
+452,m,34,['cardiologist'],"['video games','strategy games','medical simulations','tech reviews','casual streaming','fitness tracking']",y
+87,f,27,['slacker'],"['soccer','casual workouts','sports watching','street photography','urban walks','music playlists']",n
+349,m,20,['nurse'],"['singing','karaoke','breathing exercises','music listening','choir practice','vocal training']",y
+223,f,15,['programmer'],"['guitar','coding challenges','music composition','game sound design','practice recording','tech tutorials']",y
+349,m,20,['nurse'],"['singing','karaoke','breathing exercises','music listening','choir practice','vocal training']",y
+834,m,16,['biker'],"['cycling','bike maintenance','route planning','fitness tracking','outdoor photography','travel rides']",y
+522,f,24,['police cadet'],"['bowling','fitness training','navigation skills','self-defense','urban exploration','map reading']",y
+417,m,13,['janitor'],"['shooting','target practice','hand-eye coordination','safety drills','sports watching','journaling']",y
+551,m,19,['collector'],"['reading','archiving','cataloging items','research','online forums','restoration']",y
+732,m,47,['barista'],"['basketball','coffee brewing','latte art','bean tasting','food pairing','local events']",y
+172,f,25,['paramedic'],"['video games','simulation games','stress relief workouts','first-aid blogging','team sports','meditation']",n
+890,f,21,['manager'],"['fashion','styling outfits','trend analysis','social media branding','photo shoots','shopping curation']",y
+277,m,19,['medical student'],"['origami','anatomy sketching','fine motor practice','paper modeling','study breaks','focus exercises']",y
+613,f,27,['locksmith'],"['video games','mechanical puzzles','lock design','tool restoration','logic games','DIY repairs']",n
+266,f,21,['comic'],"['writing','joke crafting','improv','stand-up practice','crowd observation','voice recording']",y
+451,f,27,['scribe'],"['guitar','calligraphy','hand lettering','music transcription','ink art','journaling']",y
+910,m,24,['elder'],"['travel','cultural studies','language basics','heritage photography','journaling','local cuisine']",y
+77,f,18,['advocate'],"['reading','policy research','debate','speech writing','volunteer coordination','public forums']",n
+570,f,20,['animator'],"['reading','storyboarding','character animation','motion studies','visual storytelling','sketching']",n
+928,f,27,['dancer'],"['volunteering','choreography','movement therapy','community workshops','stretching','music exploration']",y
+639,f,52,['cinematographer'],"['animation','storyboarding','lighting design','film analysis','camera testing','visual archiving']",y

@@ -81,6 +81,10 @@ Each record represents one shipment with the following attributes:
    - Analyze which conditions (e.g., transport type, product weight, discount) most influence late deliveries  
    - Summarize findings and potential real-world applications
 
+7. ## How to run
+All results presented in this project can be reproduced by opening the notebook and executing all cells sequentially.
+
+
 ---
 
 ## Project Flow Diagram

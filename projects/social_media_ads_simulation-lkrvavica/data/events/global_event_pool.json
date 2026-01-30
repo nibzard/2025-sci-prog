@@ -1,0 +1,362 @@
+[
+    {
+        "day": -1,
+        "event_id": "GLOB_WEATHER_RAIN_01",
+        "scope": "global",
+        "text": "Persistent rain makes everything feel slower and less energizing.",
+        "tags": [
+            "weather",
+            "energy"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.8,
+        "cooldown_days": 7,
+        "duration_days": 3,
+        "expected_effects_hint": [
+            "arousal_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_WEATHER_HEAT_01",
+        "scope": "global",
+        "text": "Unusually warm weather leaves you feeling slightly sluggish.",
+        "tags": [
+            "weather",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.7,
+        "cooldown_days": 7,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "attention_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_WEATHER_COLD_01",
+        "scope": "global",
+        "text": "Colder temperatures make daily routines feel more effortful.",
+        "tags": [
+            "weather",
+            "routine"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.7,
+        "cooldown_days": 7,
+        "duration_days": 3,
+        "expected_effects_hint": [
+            "motivation_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_NEWS_DISTRACT_01",
+        "scope": "global",
+        "text": "Ongoing news coverage creates a low-level sense of distraction.",
+        "tags": [
+            "news",
+            "attention"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.9,
+        "cooldown_days": 5,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_fragmentation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_NEWS_TENSE_01",
+        "scope": "global",
+        "text": "Tense headlines subtly increase background unease.",
+        "tags": [
+            "news",
+            "mood"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 8,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_NEWS_POSITIVE_01",
+        "scope": "global",
+        "text": "Some positive news stories briefly improve the general mood.",
+        "tags": [
+            "news",
+            "optimism"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 8,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "mood_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_PLATFORM_CHANGE_01",
+        "scope": "global",
+        "text": "A minor platform update subtly changes how content is presented.",
+        "tags": [
+            "platform",
+            "change"
+        ],
+        "severity": 0.2,
+        "polarity": "neutral",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "curiosity_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_PLATFORM_GLITCH_01",
+        "scope": "global",
+        "text": "Occasional glitches make the platform feel slightly less smooth.",
+        "tags": [
+            "platform",
+            "friction"
+        ],
+        "severity": 0.3,
+        "polarity": "negative",
+        "frequency_weight": 0.4,
+        "cooldown_days": 12,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_SEASON_SHIFT_01",
+        "scope": "global",
+        "text": "A subtle seasonal shift changes daily rhythms and expectations.",
+        "tags": [
+            "season",
+            "routine"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.6,
+        "cooldown_days": 15,
+        "duration_days": 4,
+        "expected_effects_hint": [
+            "routine_disruption"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_PUBLIC_MOOD_UP_01",
+        "scope": "global",
+        "text": "There is a general sense of light optimism in public conversations.",
+        "tags": [
+            "public_mood",
+            "optimism"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 10,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "trust_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_PUBLIC_MOOD_DOWN_01",
+        "scope": "global",
+        "text": "Public conversations feel slightly more cynical than usual.",
+        "tags": [
+            "public_mood",
+            "cynicism"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "skepticism_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_TRAFFIC_HEAVY_01",
+        "scope": "global",
+        "text": "Heavier-than-usual traffic makes commuting feel more tiring.",
+        "tags": [
+            "commute",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "fatigue_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_SERVICE_OUTAGE_01",
+        "scope": "global",
+        "text": "A short service outage causes mild inconvenience for many people.",
+        "tags": [
+            "infrastructure",
+            "frustration"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.4,
+        "cooldown_days": 14,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_MARKET_FLUCT_01",
+        "scope": "global",
+        "text": "Small market fluctuations create a background sense of uncertainty.",
+        "tags": [
+            "economy",
+            "uncertainty"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.5,
+        "cooldown_days": 12,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "risk_aversion_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_CULTURE_EVENT_01",
+        "scope": "global",
+        "text": "A popular cultural event draws widespread casual attention.",
+        "tags": [
+            "culture",
+            "attention"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "attention_shift"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_TECH_BUZZ_01",
+        "scope": "global",
+        "text": "Ongoing discussion about new technology sparks mild curiosity.",
+        "tags": [
+            "technology",
+            "curiosity"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 9,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "novelty_seeking_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_AD_SATURATION_01",
+        "scope": "global",
+        "text": "Advertising feels slightly more repetitive across platforms today.",
+        "tags": [
+            "ads",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 8,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "ad_fatigue_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_SOCIAL_TREND_01",
+        "scope": "global",
+        "text": "A new social trend briefly dominates casual online conversations.",
+        "tags": [
+            "social",
+            "trend"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "curiosity_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_ROUTINE_DRAG_01",
+        "scope": "global",
+        "text": "Daily routines feel slightly repetitive and uninspiring.",
+        "tags": [
+            "routine",
+            "boredom"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.8,
+        "cooldown_days": 6,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "boredom_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GLOB_GENERAL_CALM_01",
+        "scope": "global",
+        "text": "There is a general sense of calm with fewer external pressures.",
+        "tags": [
+            "calm",
+            "mood"
+        ],
+        "severity": 0.2,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 10,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    }
+]

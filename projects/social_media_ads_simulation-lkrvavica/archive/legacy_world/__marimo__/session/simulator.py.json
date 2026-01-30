@@ -1,0 +1,294 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.4"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "5e179c27b104adec6ea1aadfeff820be",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "DEBUG: CWD is C:\\Users\\Lara\\Downloads\\ads_sim-main (2)\\ads_sim-main\nDEBUG: Found .env at C:\\Users\\Lara\\Downloads\\ads_sim-main (2)\\ads_sim-main\\.env\nDEBUG: OPENAI_API_KEY is currently set.\nDEBUG: GOOGLE_API_KEY is currently set.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "f4a2de30dabd2d04289132345fdd6118",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "4c5664115fea01ebf1cf194d3957eed6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='vblA-0' random-id='e5e74d61-9645-b9c5-9663-b2a832231064'><marimo-dropdown data-initial-value='[&quot;openai&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;LLM Backend&lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;local&quot;,&quot;openai&quot;,&quot;google&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "a071e2506ff0ef81c27bc2e07653b9c6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "d1f11949365229dba05a9fa7caca7dbb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='lEQa-0' random-id='4620bb81-33b5-857d-b861-098cd4d6147a'><marimo-dropdown data-initial-value='[&quot;gpt-4o&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Model&lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;chatgpt-image-latest&quot;,&quot;gpt-3.5-turbo&quot;,&quot;gpt-3.5-turbo-0125&quot;,&quot;gpt-3.5-turbo-1106&quot;,&quot;gpt-3.5-turbo-16k&quot;,&quot;gpt-3.5-turbo-instruct&quot;,&quot;gpt-3.5-turbo-instruct-0914&quot;,&quot;gpt-4.1&quot;,&quot;gpt-4.1-2025-04-14&quot;,&quot;gpt-4.1-mini&quot;,&quot;gpt-4.1-mini-2025-04-14&quot;,&quot;gpt-4.1-nano&quot;,&quot;gpt-4.1-nano-2025-04-14&quot;,&quot;gpt-4o&quot;,&quot;gpt-4o-2024-05-13&quot;,&quot;gpt-4o-2024-08-06&quot;,&quot;gpt-4o-2024-11-20&quot;,&quot;gpt-4o-audio-preview&quot;,&quot;gpt-4o-audio-preview-2024-12-17&quot;,&quot;gpt-4o-audio-preview-2025-06-03&quot;,&quot;gpt-4o-mini&quot;,&quot;gpt-4o-mini-2024-07-18&quot;,&quot;gpt-4o-mini-audio-preview&quot;,&quot;gpt-4o-mini-audio-preview-2024-12-17&quot;,&quot;gpt-4o-mini-search-preview&quot;,&quot;gpt-4o-mini-search-preview-2025-03-11&quot;,&quot;gpt-4o-mini-transcribe&quot;,&quot;gpt-4o-mini-transcribe-2025-03-20&quot;,&quot;gpt-4o-mini-transcribe-2025-12-15&quot;,&quot;gpt-4o-mini-tts&quot;,&quot;gpt-4o-mini-tts-2025-03-20&quot;,&quot;gpt-4o-mini-tts-2025-12-15&quot;,&quot;gpt-4o-search-preview&quot;,&quot;gpt-4o-search-preview-2025-03-11&quot;,&quot;gpt-4o-transcribe&quot;,&quot;gpt-4o-transcribe-diarize&quot;,&quot;gpt-5&quot;,&quot;gpt-5-2025-08-07&quot;,&quot;gpt-5-chat-latest&quot;,&quot;gpt-5-codex&quot;,&quot;gpt-5-mini&quot;,&quot;gpt-5-mini-2025-08-07&quot;,&quot;gpt-5-nano&quot;,&quot;gpt-5-nano-2025-08-07&quot;,&quot;gpt-5-pro&quot;,&quot;gpt-5-pro-2025-10-06&quot;,&quot;gpt-5-search-api&quot;,&quot;gpt-5-search-api-2025-10-14&quot;,&quot;gpt-5.1&quot;,&quot;gpt-5.1-2025-11-13&quot;,&quot;gpt-5.1-chat-latest&quot;,&quot;gpt-5.1-codex&quot;,&quot;gpt-5.1-codex-max&quot;,&quot;gpt-5.1-codex-mini&quot;,&quot;gpt-5.2&quot;,&quot;gpt-5.2-2025-12-11&quot;,&quot;gpt-5.2-chat-latest&quot;,&quot;gpt-5.2-codex&quot;,&quot;gpt-5.2-pro&quot;,&quot;gpt-5.2-pro-2025-12-11&quot;,&quot;gpt-audio&quot;,&quot;gpt-audio-2025-08-28&quot;,&quot;gpt-audio-mini&quot;,&quot;gpt-audio-mini-2025-10-06&quot;,&quot;gpt-audio-mini-2025-12-15&quot;,&quot;gpt-image-1&quot;,&quot;gpt-image-1-mini&quot;,&quot;gpt-image-1.5&quot;,&quot;gpt-realtime&quot;,&quot;gpt-realtime-2025-08-28&quot;,&quot;gpt-realtime-mini&quot;,&quot;gpt-realtime-mini-2025-10-06&quot;,&quot;gpt-realtime-mini-2025-12-15&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "2a41f4613ac856674714f9f26b12c818",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "521fce53319dff993bb379eb293836ed",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "59997574568482788ff05813c9ae9622",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "1269cfa479a3916a81f88ec5230943eb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "2c21e01e5d1bd2a5077de1d8c2bd3465",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "8a6c926cbeb8db719e61fa746c6ee239",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "aa8a7d99bd3ba95bb3588192c35226b5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "a32b447e63527546043f1d0fbbbc7202",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "35d99ad112919999aa4c025d958309b8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "7afefd506a79b5eb56e00b46c925dbb5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "ef7225ade174daa97857279141b25d8a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ROlb-0' random-id='c5499930-fbeb-8647-6a73-0bf6a273d423'><marimo-button data-initial-value='0' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Run Simulation Step&lt;/span&gt;&lt;/span&gt;&quot;' data-kind='&quot;neutral&quot;' data-disabled='false' data-full-width='false'></marimo-button></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "886d8a3cc603fddb2ff0432115efe968",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "3148a2cceae5b0a7921455bc784abe62",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Znng",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

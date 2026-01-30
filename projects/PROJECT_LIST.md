@@ -103,6 +103,13 @@ This file lists all individual projects for the Scientific Programming course. S
 * **Status:** In Progress
 * **Description:** The goal of the project is to use reinforcement learning algorithms or genetic algorithms to train an agent to play a Flappy Bird style game autonomously and then compare agent vs human gameplay behavior. Optional extensions include evaluation of performance of large language models as simplified agents and modification of the game’s difficulty to observe how agent performance adapts. 
 
+### Sales Forecasting Using Historical Retail Data - Karla Kulić
+* **Project:** Sales Forecasting Using Historical Retail Data
+* **Student:** Karla Kulić
+* **Folder:** `sales-forecasting-karlakulic/`
+* **Status:** In Progress
+* **Description:** Forecasting future retail sales using historical time series data to support inventory planning and decision making.
+
 ### SiteSecGym - Paško Stipandžija
 * **Project:** SiteSecGym - Playground for Testing Web Agents
 * **Student:** Paško Stipandžija

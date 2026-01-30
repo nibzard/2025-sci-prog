@@ -1,0 +1,23 @@
+simulation_days: 100
+agents_count: 50
+ads_count: 100
+agents_exposed_to_ad: 20
+new_ads_per_day: 5
+days_ads_can_enter: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80]
+max_ads_shown_per_day: 10
+ad_deactivation_threshold: -500
+actions: ["click", "like", "dislike", "ignore", "share"]
+action_compatibility:
+  ignore: ["share"]
+  click: ["like", "dislike", "share"]
+  like: ["click", "share"]
+  dislike: ["click", "share"]
+  share: ["like", "dislike", "click"]
+update_frequency: "daily"
+seed: 42
+evaluation_starting_day: 10
+friendship_threshold: 0.3
+llm_backend: "openai" # Options: "local", "openai"
+local_llm_url: "http://localhost:11434/api/generate"
+openai_model: "gpt-4o"
+local_model: "llama3"
