@@ -1,0 +1,79 @@
+flowchart TB
+    subgraph Phase1[" "]
+        direction LR
+        F1[FAZA 1<br/>Prikupljanje Podataka<br/>━━━━━━━━━━━━━━━━<br/>Fetch GitHub API<br/>233 PR-a<br/>CSV format]
+    end
+    
+    subgraph Phase2[" "]
+        direction LR
+        F2[FAZA 2<br/>Feature Engineering<br/>━━━━━━━━━━━━━━━━<br/>Efektivno vrijeme<br/>Text analiza<br/>Jezik detekcija]
+    end
+    
+    subgraph Phase3[" "]
+        direction LR
+        F3[FAZA 3<br/>Feature Importance<br/>━━━━━━━━━━━━━━━━<br/>Random Forest<br/>Identifikacija<br/>prediktora]
+    end
+    
+    subgraph Phase4[" "]
+        direction LR
+        F4[FAZA 4<br/>EDA Analiza<br/>━━━━━━━━━━━━━━━━<br/>Korelacije<br/>Distribucije<br/>Vizualizacije]
+    end
+    
+    subgraph Phase5[" "]
+        direction LR
+        F5[FAZA 5<br/>Feature Importance<br/>━━━━━━━━━━━━━━━━<br/>Potvrda feature-a<br/>Nakon čišćenja]
+    end
+    
+    subgraph Phase6[" "]
+        direction LR
+        F6[FAZA 6<br/>Algoritmi & Modeli<br/>━━━━━━━━━━━━━━━━<br/>XGBoost<br/>R²: 0.1988<br/>Feature selection]
+    end
+    
+    subgraph Phase7[" "]
+        direction LR
+        F7[FAZA 7<br/>Kvaliteta Podataka<br/>━━━━━━━━━━━━━━━━<br/>Balansiranje<br/>Reviewer feature-i<br/>Redundantni stupci]
+    end
+    
+    subgraph Phase8[" "]
+        direction LR
+        F8[FAZA 8<br/>XGBoost Optimizacija<br/>━━━━━━━━━━━━━━━━<br/>Hyperparameter tuning<br/>Poboljšane performanse]
+    end
+    
+    subgraph Phase9[" "]
+        direction LR
+        F9[FAZA 9<br/>Napredna Poboljšanja<br/>━━━━━━━━━━━━━━━━<br/>Calibration<br/>Quantile regression<br/>R²: 0.9244]
+    end
+    
+    subgraph Phase10[" "]
+        direction LR
+        F10[FAZA 10<br/>Ensemble Model<br/>━━━━━━━━━━━━━━━━<br/>Normal + Long Model<br/>R²: 0.6643<br/>Specializirani modeli]
+    end
+    
+    subgraph Phase11[" "]
+        direction LR
+        F11[FAZA 11<br/>Production System<br/>━━━━━━━━━━━━━━━━<br/>Plug & Play<br/>CLI Interface<br/>GitHub API]
+    end
+
+    F1 --> F2 --> F3 --> F4 --> F5 --> F6 --> F7 --> F8 --> F9 --> F10 --> F11
+
+    %% Iteracije
+    F4 -.->|Iteracija| F2
+    F5 -.->|Iteracija| F2
+    F6 -.->|Iteracija| F2
+    F6 -.->|Iteracija| F7
+    F7 -.->|Iteracija| F2
+    F8 -.->|Iteracija| F6
+    F9 -.->|Iteracija| F8
+    F10 -.->|Iteracija| F9
+
+    style F1 fill:#E3F2FD,stroke:#1976D2,stroke-width:3px
+    style F2 fill:#E3F2FD,stroke:#1976D2,stroke-width:3px
+    style F3 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px
+    style F4 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px
+    style F5 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px
+    style F6 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px
+    style F7 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px
+    style F8 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px
+    style F9 fill:#E8F5E9,stroke:#388E3C,stroke-width:3px
+    style F10 fill:#E8F5E9,stroke:#388E3C,stroke-width:3px
+    style F11 fill:#FFE0B2,stroke:#E65100,stroke-width:3px

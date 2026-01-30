@@ -1,0 +1,7 @@
+If you want, next good steps would be:
+
+Residual plots on log vs original scale
+
+Error by segment (short vs long durations)
+
+Prediction intervals (XGBoost can approximate these)

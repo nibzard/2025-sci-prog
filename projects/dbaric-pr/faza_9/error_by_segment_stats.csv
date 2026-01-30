@@ -1,0 +1,7 @@
+,error,error,error,abs_error,abs_error,actual,actual
+,mean,std,count,mean,median,mean,median
+segment,,,,,,,
+Very Short,-162.08,406.65,7,270.63,145.37,241.28,49.68
+Short,-133.37,714.67,7,530.13,513.8,1323.3,1372.0
+Medium,164.8,537.47,6,479.3,473.29,2121.19,2083.76
+Long,1167.27,1911.82,7,1774.7,1266.93,6362.0,3792.32

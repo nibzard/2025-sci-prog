@@ -1,0 +1,48 @@
+flowchart LR
+    Start([START]) -->|Prikupljanje| F1[FAZA 1<br/>━━━━━━━━━━━━━━━━<br/>GitHub API<br/>233 PR-a<br/>CSV format]
+    
+    F1 -->|Feature-i| F2[FAZA 2<br/>━━━━━━━━━━━━━━━━<br/>Efektivno vrijeme<br/>Text analiza<br/>Jezik detekcija]
+    
+    F2 -->|Analiza| F3[FAZA 3<br/>━━━━━━━━━━━━━━━━<br/>Feature Importance<br/>Random Forest<br/>Prediktori]
+    
+    F3 -->|EDA| F4[FAZA 4<br/>━━━━━━━━━━━━━━━━<br/>Korelacije<br/>Distribucije<br/>Vizualizacije]
+    
+    F4 -->|Potvrda| F5[FAZA 5<br/>━━━━━━━━━━━━━━━━<br/>Feature Importance<br/>Nakon čišćenja]
+    
+    F5 -->|Modeliranje| F6[FAZA 6<br/>━━━━━━━━━━━━━━━━<br/>XGBoost<br/>R²: 0.1988<br/>Feature selection]
+    
+    F6 -->|Kvaliteta| F7[FAZA 7<br/>━━━━━━━━━━━━━━━━<br/>Balansiranje<br/>Reviewer feature-i<br/>Redundantni stupci]
+    
+    F7 -->|Optimizacija| F8[FAZA 8<br/>━━━━━━━━━━━━━━━━<br/>XGBoost tuning<br/>Hyperparameters<br/>Poboljšanja]
+    
+    F8 -->|Napredno| F9[FAZA 9<br/>━━━━━━━━━━━━━━━━<br/>Calibration<br/>Quantile regression<br/>R²: 0.9244]
+    
+    F9 -->|Ensemble| F10[FAZA 10<br/>━━━━━━━━━━━━━━━━<br/>Normal + Long<br/>R²: 0.6643<br/>Specializirani]
+    
+    F10 -->|Production| F11[FAZA 11<br/>━━━━━━━━━━━━━━━━<br/>Plug & Play<br/>CLI Interface<br/>GitHub API]
+    
+    F11 --> End([END<br/>Production Ready])
+
+    %% Iteracije - povratne veze
+    F4 -.->|Iteracija| F2
+    F5 -.->|Iteracija| F2
+    F6 -.->|Iteracija| F2
+    F6 -.->|Iteracija| F7
+    F7 -.->|Iteracija| F2
+    F8 -.->|Iteracija| F6
+    F9 -.->|Iteracija| F8
+    F10 -.->|Iteracija| F9
+
+    style Start fill:#90EE90,stroke:#2E7D32,stroke-width:4px,color:#000
+    style End fill:#90EE90,stroke:#2E7D32,stroke-width:4px,color:#000
+    style F1 fill:#E3F2FD,stroke:#1976D2,stroke-width:3px,color:#000
+    style F2 fill:#E3F2FD,stroke:#1976D2,stroke-width:3px,color:#000
+    style F3 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px,color:#000
+    style F4 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px,color:#000
+    style F5 fill:#FFF3E0,stroke:#F57C00,stroke-width:3px,color:#000
+    style F6 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px,color:#000
+    style F7 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px,color:#000
+    style F8 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:3px,color:#000
+    style F9 fill:#E8F5E9,stroke:#388E3C,stroke-width:3px,color:#000
+    style F10 fill:#E8F5E9,stroke:#388E3C,stroke-width:3px,color:#000
+    style F11 fill:#FFE0B2,stroke:#E65100,stroke-width:3px,color:#000
