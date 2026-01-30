@@ -29,7 +29,8 @@ class Tournament:
                 black_player = match_info["black"]
                 
                 print(f"Playing match: {white_player.name} (white) vs {black_player.name} (black)")
-                match = Match(white_player, black_player)
+                existing_pgn = match_info.get("pgn_filename")
+                match = Match(white_player, black_player, pgn_filename=existing_pgn)
                 result = match.test_play()
                 pgn_filename = match.pgn_filename # Retrieve pgn_filename
                 

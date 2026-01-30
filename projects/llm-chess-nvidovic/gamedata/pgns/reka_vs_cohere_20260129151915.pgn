@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "reka"]
+[Black "cohere"]
+[Result "1-0"]
+
+1. e4 e5 2. Ke2 Nf6 3. d4 Be7 4. d5 g6 5. Ke3 Bc5+ 6. Ke2 O-O 7. Kf3 Kh8 8. Qd3 Nxe4 9. Qxe4 Qh4 10. g4 Kg8 11. Qxe5 Bd4 12. Qe8 Kh8 13. Qxf8# 1-0
+

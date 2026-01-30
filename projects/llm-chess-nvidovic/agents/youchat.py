@@ -9,11 +9,16 @@ class YouChatAgent:
         self.youchat = YouChat()
         self.name = "YouChat Agent"
 
-    def get_move(self, fen: str, color: str) -> str:
+    def get_move(self, fen: str, color: str, forced_prompt: str = None, player_name: str = None) -> str:
         try:
-            prompt = get_move_prompt(fen, color)
+            if forced_prompt:
+                prompt = forced_prompt
+            else:
+                from utils.prompts import get_move_prompt
+                prompt = get_move_prompt(fen, color)
             
             response = self.youchat.chat(prompt)
+            print(f"{player_name} raw response: {response}")
             return response
         except Exception as e:
             return f"ERROR from YouChat: {e}"

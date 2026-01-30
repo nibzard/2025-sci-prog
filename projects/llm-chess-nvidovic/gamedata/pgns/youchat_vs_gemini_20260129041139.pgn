@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "1-0"]
+[White "youchat"]
+[Black "gemini"]
+[Result "1-0"]
+
+1. e4 e5 2. Nf3 Nf6 3. Ng5 Be7 4. Nxf7 g6 5. Nxh8 Bd6 6. Nxg6 Kf7 7. Nf8 Qxf8 8. Nc3 Nc6 9. Nd5 Qh8 10. Nxc7 Qg8 11. Ne8 Qh8 12. Qf3 Qg8 13. Qxf6+ Kxe8 14. Qh8 Kf8 15. Qxg8+ Ke7 16. Qf8+ Ke6 17. Bc4# 1-0
+

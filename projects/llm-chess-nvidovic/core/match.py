@@ -1,15 +1,15 @@
 import chess
 import chess.pgn
-import random
 import datetime
 import re
 import time
+import os
 from utils.logging import log_illegal_move
-from utils.move_parsing import parse_and_validate_move
+from utils.move_parsing import get_move_with_recovery, parse_and_validate_move
 from utils.pgn_tools import save_pgn
 
 class Match:
-    def __init__(self, player_white, player_black):
+    def __init__(self, player_white, player_black, pgn_filename=None):
         self.player_white = player_white
         self.player_black = player_black
         self.board = chess.Board()
@@ -27,7 +27,23 @@ class Match:
         black_name = re.sub(r'[^\w\-.]', '_', player_black.name)
         timestamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
         self.illegal_move_log_file = f"gamedata/logs/{white_name}_vs_{black_name}_{timestamp}_illegal_moves.log"
-        self.pgn_filename = f"gamedata/pgns/{white_name}_vs_{black_name}_{timestamp}.pgn"
+        self.pgn_filename = pgn_filename or f"gamedata/pgns/{white_name}_vs_{black_name}_{timestamp}.pgn"
+
+        if pgn_filename and os.path.exists(pgn_filename):
+            self.load_from_pgn(pgn_filename)
+        
+        self.current_node = self.game
+
+    def load_from_pgn(self, pgn_filename):
+        with open(pgn_filename, 'r') as f:
+            self.game = chess.pgn.read_game(f)
+        self.board = self.game.board()
+        self.current_node = self.game # Initialize current_node to the root of the loaded game
+        for move in self.game.mainline_moves():
+            self.board.push(move)
+            self.moves.append(move)
+            self.current_node = self.current_node.add_variation(move) # Advance current_node along with the moves
+        self.result = self.game.headers.get("Result", None)
 
     def board_str(self):
         return str(self.board)
@@ -41,39 +57,40 @@ class Match:
     def play_move(self, move):
         self.board.push(move)
         self.moves.append(move)
-        self.game = self.game.add_variation(move)
+        
+        self.current_node = self.current_node.add_variation(move)
+
+        if self.board.is_stalemate():
+            self.game.headers["Result"] = "1/2-1/2"
+            print("Game over: Stalemate!")
+        elif self.board.can_claim_threefold_repetition():
+            self.game.headers["Result"] = "1/2-1/2"
+            print("Game over: Threefold repetition!")
+        elif self.board.is_insufficient_material():
+            self.game.headers["Result"] = "1/2-1/2"
+            print("Game over: Insufficient material!")
         
         return self.board.is_game_over()
 
     def test_play(self):
         current_player = self.player_white
-        node = self.game
         while not self.board.is_game_over(claim_draw=True):
-            board_fen = self.board.fen()
-            move_uci = current_player.get_move(board_fen, "white" if current_player == self.player_white else "black")
-            print(f"LLM response: {move_uci}")
-            move = parse_and_validate_move(self.board, move_uci)
-
-            if move is None:
-                move_number = self.board.ply() // 2 + 1
-                opponent_name = self.player_black.name if current_player == self.player_white else self.player_white.name
-                log_illegal_move(self.illegal_move_log_file, current_player.name, opponent_name, board_fen, move_uci, move_number)
-                print("AI returned invalid/illegal move. Making a random legal move instead.")
-                move = random.choice(list(self.board.legal_moves))
+            player_color_str = "white" if current_player == self.player_white else "black"
+            opponent_name = self.player_black.name if current_player == self.player_white else self.player_white.name
+            move = get_move_with_recovery(self.board, current_player, player_color_str, self.illegal_move_log_file, opponent_name)
 
             self.board.push(move)
-            node = node.add_variation(move)
+            self.current_node = self.current_node.add_variation(move)
             print(f"{current_player.name} plays: {move.uci()}\n{self.board_str()}\n")
 
             current_player = self.player_black if current_player == self.player_white else self.player_white
-            time.sleep(10)
+            time.sleep(15)
         self.result = self.board.result()
         save_pgn(self.pgn_filename, self.game)
         return self.result
 
     def play_with_user(self):
         current_player = self.player_white
-        node = self.game
 
         while not self.board.is_game_over(claim_draw=True):
             player_color_str = "white" if current_player == self.player_white else "black"
@@ -89,20 +106,11 @@ class Match:
                     else:
                         print("Invalid or illegal move. Try again.")
             else: # AI player
-                board_fen = self.board.fen()
-                move_uci = current_player.get_move(board_fen, player_color_str)
-                print(f"LLM response: {move_uci}")
-                move = parse_and_validate_move(self.board, move_uci)
-                
-                if move is None:
-                    move_number = self.board.ply() // 2 + 1
-                    opponent_name = self.player_black.name if current_player == self.player_white else self.player_white.name
-                    log_illegal_move(self.illegal_move_log_file, current_player.name, opponent_name, board_fen, move_uci, move_number)
-                    print("AI returned invalid/illegal move. Making a random legal move instead.")
-                    move = random.choice(list(self.board.legal_moves))
+                opponent_name = self.player_black.name if current_player == self.player_white else self.player_white.name
+                move = get_move_with_recovery(self.board, current_player, player_color_str, self.illegal_move_log_file, opponent_name)
             
             self.board.push(move)
-            node = node.add_variation(move)
+            self.current_node = self.current_node.add_variation(move)
             print(f"{current_player.name} plays: {move.uci()}\n{self.board_str()}\n")
 
             current_player = self.player_black if current_player == self.player_white else self.player_white

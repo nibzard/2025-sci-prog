@@ -25,5 +25,5 @@ class AgentWrapper:
         else:
             raise ValueError(f"Unknown agent: {self.agent_name}")
 
-    def get_move(self, fen, color):
-        return self.agent.get_move(fen, color)
+    def get_move(self, fen, color, forced_prompt=None, player_name=None):
+        return self.agent.get_move(fen, color, forced_prompt=forced_prompt, player_name=player_name or self.name)
