@@ -1,12 +1,11 @@
 Location Prediction - Marija Karoglan
 
-Project: Location Prediction Student: Marija Karoglan Status: In Progress
+Project: Abnormal ship behavior : Marija Karoglan Status: Done
 
 Project Overview
 
-The aim of the project is to create a model that predicts the possible location of a boat after it sends an SOS signal taking into account different variables (time, currents etc.) and balancing different metrics (mathematical equations).
-Data which will be used to train the model will be based on public reports of boating incidents as actual data (in regards to coordinates, damages, injuries etc.) is *usually* unavailable.
-The formulas as well as impacts of the currents on bodies in water will be sourced from scholastic articles.  
+The aim of the project is to detect abnormall ship behavior using AIS data. The topic was changed from the original one, that's the reason for the different directory name.
+The project was done in Google Colab (Jupyter notebook) and follows the framework given in 'A framework for ship abnormal behaviour detection and classification using AIS data'(H. Rong, A. P. Teixeira, C. Guedes Soares, 2024, Reliability Engineering & System Safety). The framework was adjusted to fit the dataset (https://www.kaggle.com/datasets/eminserkanerdonmez/ais-dataset). A more detailed process description will be presented during the lecture. 
 
 Student Information
 

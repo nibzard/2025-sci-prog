@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "groq"]
+[Black "youchat"]
+[Result "1/2-1/2"]
+
+1. e4 e5 2. Nc3 Nf6 3. d4 Be7 4. Nf3 O-O 5. Bd3 exd4 6. O-O Qe8 7. Bc4 Bd6 8. Bg5 Qe7 9. Qd3 Qe5 10. Rfe1 Ng4 11. Bh4 Re8 12. Bg5 Re7 13. Nd5 Qxd5 14. Nxd4 Qxc4 15. Nb3 Re6 16. Nc5 Re7 17. Ne6 Nc6 18. Nd4 Kh8 19. Nb3 Re6 20. Nc5 Rh6 21. Na6 Nb4 22. Nxc7 Qc3 23. Nb5 Be7 24. Nc7 Bf6 25. Nb5 Qxc2 26. Nc7 Kg8 27. Nb5 Be5 28. Nc7 Rh5 29. Bf6 Rh6 30. Be7 Rg6 31. Qe2 Kh8 32. Qxc2 Nxc2 33. Bf8 Nxa1 34. Bd6 Rf6 35. Bc5 Bd4 36. Bxd4 Rh6 37. Be5 Rg6 38. Bd6 Nc2 39. Bf8 Rg5 40. Bxg7+ Kxg7 41. Ne8+ Kg8 42. Nc7 Nxf2 43. Ne8 Nd4 44. Nc7 Nf3+ 45. Kxf2 Nh4 46. h3 Rg3 47. Ne8 Kh8 48. Nc7 Nf3 49. Ne8 Rxg2+ 50. Kxf3 Rg1 51. Ng7 Rg2 52. Nh5 Rg7 53. Nf6 Rg6 54. Nxh7 d5 55. Nf6 d4 56. Nh7 d3 57. Nf6 d2 58. Nh7 d1=R 59. Rxd1 Kg8 60. Nf6+ Kh8 61. Nh7 Kg8 62. Nf6+ Kh8 1/2-1/2
+

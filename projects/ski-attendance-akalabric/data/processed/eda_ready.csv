@@ -1,0 +1,2 @@
+date,snow_mean,snow_max,snow_min,n_points,avg_dist2,id,resort,country,continent,price,season,highest_point,lowest_point,beginner_slopes,intermediate_slopes,difficult_slopes,total_slopes,surface_lifts,chair_lifts,gondola_lifts,total_lifts,lift_capacity,child_friendly,snowparks,nightskiing,summer_skiing,latitude,longitude,month,weekday,is_weekend,snow_day,heavy_snow_day
+2022-12-01,90.8475,97.64,73.23,4,0.0407020447222404,3,Golm,Austria,Europe,48,December - April,2110,650,13,12,1,26,4,4,3,11,16240,1,0,0,0,47.05781,9.8281668,12,3,0,1,1

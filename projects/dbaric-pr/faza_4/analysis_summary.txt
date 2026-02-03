@@ -1,0 +1,38 @@
+
+DATA ANALYSIS SUMMARY REPORT
+============================================================
+
+Dataset Information:
+- Total rows: 222
+- Total columns: 50
+- Numeric columns: 28
+- Categorical columns: 7
+
+Correlation Analysis:
+- Total feature pairs analyzed: 300
+- Strongest positive correlation: description_length vs description_word_count (0.994)
+- Strongest negative correlation: title_croatian_words vs time_to_first_approval_minutes (-0.002)
+
+Missing Data:
+- Columns with missing data: 9
+- Total missing values: 447
+
+Key Features Analyzed:
+effective_minutes, non_working_minutes, additions, deletions, changed_files, commits, review_count, time_to_first_review_minutes, time_to_first_approval_minutes, title_length
+...
+
+Generated Files:
+1. correlation_matrix.csv - Full correlation matrix
+2. top_correlations.csv - Top correlations between feature pairs
+3. descriptive_statistics.csv - Basic descriptive statistics
+4. additional_statistics.csv - Extended statistics (skewness, kurtosis, etc.)
+5. missing_data_analysis.csv - Missing data analysis
+6. correlation_matrix_full.png - Full correlation heatmap
+7. correlation_matrix_top.png - Top correlations heatmap
+8. distributions.png - Distribution plots for key features
+9. boxplots.png - Box plots for outlier detection
+10. pairwise_relationships.png - Scatter plots of top correlated pairs
+11. categorical_analysis.png - Categorical feature distributions
+12. missing_data.png - Missing data visualization
+
+============================================================

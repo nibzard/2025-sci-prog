@@ -1,0 +1,10 @@
+{
+  "selected_resort": "Golm",
+  "country": "Austria",
+  "lat": 47.05781,
+  "lon": 9.8281668,
+  "start_date": "2022-12-01",
+  "end_date": "2023-03-31",
+  "search_box_deg": 0.75,
+  "k_nearest": 4
+}

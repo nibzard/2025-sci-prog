@@ -1,0 +1,30 @@
+# Environment
+.env
+
+# Data files
+data/images/
+data/raw/
+data/processed/
+
+# Scraper config (contains URLs)
+src/scraping/properties.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Marimo cache
+__marimo__/
+
+# CatBoost cache
+catboost_info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

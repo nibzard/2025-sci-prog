@@ -1,0 +1,41 @@
+﻿game_id;white;black;date;game;result;opening;eco_code;white_brilliant_moves;black_brilliant_moves;white_critical_moves;black_critical_moves;white_best_moves;black_best_moves;white_excellent_moves;black_excellent_moves;white_ok_moves;black_ok_moves;white_inaccuracies;black_inaccuracies;white_mistakes;black_mistakes;white_blunders;black_blunders;white_theoretical_moves;black_theoretical_moves;white_move_accuracy;black_move_accuracy;termination_by;white_illegal_moves;black_illegal_moves;white_illegal_streak_max;black_illegal_streak_max;white_random_fallbacks;black_random_fallbacks
+gemini_vs_cohere_20260128151848;gemma-3-27b-it;command-a-03-2025;28.1.2026;0;1/2-1/2;Petrov's Defence;C42;0;0;0;0;2;1;2;3;2;0;2;4;0;1;11;10;3;3;56,7;55,7;repetition;18;23;2;5;0;1
+gemini_vs_groq_20260128153558;gemma-3-27b-it;llama-3.3-70b-versatile;28.1.2026;1;0-1;Scandinavian Defence;B01;0;0;0;0;2;1;2;2;3;7;5;5;6;3;19;20;2;1;41,4;41,7;checkmate;40;33;5;2;1;0
+gemini_vs_reka_20260128160139;gemma-3-27b-it;reka-core-20240501;28.1.2026;2;1/2-1/2;King's Pawn Game;C44;0;0;0;0;0;0;1;2;0;0;2;1;0;0;2;1;2;2;67,6;74,6;repetition;6;3;3;1;0;0
+gemini_vs_youchat_20260128160619;gemma-3-27b-it;youchat;28.1.2026;3;1/2-1/2;King's Pawn Game;C44;0;0;0;0;2;2;4;3;3;7;5;4;2;2;11;10;2;1;54;54,2;repetition;44;16;18;2;5;0
+cohere_vs_gemini_20260128213149;command-a-03-2025;gemma-3-27b-it;28.1.2026;4;1/2-1/2;Petrov's Defence;C42;0;0;0;0;7;3;6;6;5;8;6;9;3;0;0;1;2;2;81,2;78,3;repetition;27;26;2;2;0;0
+cohere_vs_groq_20260128223303;command-a-03-2025;llama-3.3-70b-versatile;28.1.2026;5;1/2-1/2;Scandinavian Defence;B01;0;0;0;0;8;6;13;3;2;2;3;0;4;13;6;12;2;1;72,4;70,5;repetition;35;26;3;2;0;0
+cohere_vs_reka_20260128230548;command-a-03-2025;reka-core-20240501;28.1.2026;6;1/2-1/2;King's Knight Opening;C40;0;0;0;0;3;2;3;3;0;1;1;0;2;1;4;5;2;2;62,6;62,2;repetition;11;11;3;3;0;0
+cohere_vs_youchat_20260128232326;command-a-03-2025;youchat;28.1.2026;7;1/2-1/2;King's Knight Opening;C40;0;0;0;0;0;3;3;2;5;5;4;1;2;3;2;2;2;1;68,9;69,9;repetition;17;17;2;2;0;0
+groq_vs_gemini_20260128234132;llama-3.3-70b-versatile;gemma-3-27b-it;28.1.2026;8;1/2-1/2;Centre Game;C21;0;0;0;0;1;1;1;2;11;6;4;8;9;8;35;37;2;1;36,4;36,1;repetition;75;59;5;2;2;0
+groq_vs_cohere_20260129004745;llama-3.3-70b-versatile;command-a-03-2025;29.1.2026;9;1/2-1/2;King's Pawn Game;C44;0;0;0;0;0;0;0;0;1;0;2;3;4;3;7;7;1;1;46,7;43,5;repetition;20;19;4;4;1;2
+groq_vs_reka_20260129010248;llama-3.3-70b-versatile;reka-core-20240501;29.1.2026;10;1/2-1/2;King's Pawn Game;C44;0;0;0;0;3;2;7;0;5;1;1;4;6;6;8;17;1;1;58,9;58;repetition;27;27;2;2;0;0
+groq_vs_youchat_20260129014357;llama-3.3-70b-versatile;youchat;29.1.2026;11;1/2-1/2;Centre Game;C21;0;0;0;0;1;0;2;2;5;6;1;2;3;4;9;8;2;1;57,4;54,3;repetition;15;21;1;2;0;0
+reka_vs_gemini_20260129020457;reka-core-20240501;gemma-3-27b-it;29.1.2026;12;1/2-1/2;Bongcloud;;0;0;0;0;0;1;0;0;2;1;2;1;4;7;2;1;2;1;60,5;60,6;repetition;7;9;2;3;0;0
+reka_vs_cohere_20260129021624;reka-core-20240501;command-a-03-2025;29.1.2026;13;1/2-1/2;Bongcloud;;0;0;0;0;1;1;2;1;3;2;1;3;2;1;4;6;2;1;61,8;56,2;repetition;10;29;2;9;0;5
+reka_vs_groq_20260129025747;reka-core-20240501;llama-3.3-70b-versatile;29.1.2026;14;1/2-1/2;English Opening;A10;0;0;0;0;0;0;1;3;1;3;7;0;6;6;13;17;2;1;31,7;34,1;repetition;26;19;4;2;0;0
+reka_vs_youchat_20260129034950;reka-core-20240501;youchat;29.1.2026;15;0-1;Bongcloud;;0;0;0;0;5;5;2;7;3;5;1;0;5;3;5;3;2;1;70,4;74,4;checkmate;20;16;4;2;0;0
+youchat_vs_gemini_20260129041139;youchat;gemma-3-27b-it;29.1.2026;16;1-0;Petrov's Defence;C42;0;0;0;0;3;2;3;1;1;3;3;1;1;0;4;6;2;2;69,8;64,3;checkmate;9;13;2;3;0;0
+youchat_vs_cohere_20260129042804;youchat;command-a-03-2025;29.1.2026;17;1/2-1/2;Petrov's Defence;C42;0;0;0;0;0;0;4;1;2;6;5;7;9;3;1;4;2;2;66,1;64,7;repetition;16;21;2;4;0;0
+youchat_vs_groq_20260129045005;youchat;llama-3.3-70b-versatile;29.1.2026;18;1/2-1/2;King's Pawn Game;C44;0;0;0;0;3;1;0;1;0;1;1;0;2;3;10;9;1;1;39,9;38,7;repetition;15;12;2;3;0;0
+youchat_vs_reka_20260129050510;youchat;reka-core-20240501;29.1.2026;19;1/2-1/2;King's Knight Opening;C40;0;0;0;0;5;4;4;6;8;7;4;4;1;1;7;6;2;2;68,3;69,5;repetition;11;25;2;6;0;0
+gemini_vs_cohere_20260129053029;gemma-3-27b-it;command-a-03-2025;29.1.2026;20;1/2-1/2;Petrov's Defence;C42;0;0;0;0;0;0;0;1;1;2;2;0;0;1;6;5;3;2;53,6;56,4;repetition;11;11;3;4;0;1
+gemini_vs_groq_20260129054339;gemma-3-27b-it;llama-3.3-70b-versatile;29.1.2026;21;1/2-1/2;Petrov's Defence;C42;0;0;0;0;1;3;2;2;1;3;10;7;2;7;18;13;4;3;46,6;48,2;repetition;36;33;3;2;0;0
+gemini_vs_reka_20260129062702;gemma-3-27b-it;reka-core-20240501;29.1.2026;22;1/2-1/2;King's Knight Opening;C40;0;0;0;0;0;0;1;3;2;0;1;1;1;0;5;5;2;2;55,5;54,7;repetition;11;7;3;2;0;0
+gemini_vs_youchat_20260129073731;gemma-3-27b-it;youchat;29.1.2026;23;1/2-1/2;King's Knight Opening;C40;0;0;0;0;9;7;8;10;4;12;17;5;1;3;4;6;2;1;72;72,5;repetition;40;18;7;2;0;0
+cohere_vs_gemini_20260129082458;command-a-03-2025;gemma-3-27b-it;29.1.2026;24;1/2-1/2;Petrov's Defence;C42;0;0;0;0;1;2;6;4;1;3;2;1;2;1;2;2;2;2;73,9;74,8;repetition;14;12;2;2;0;0
+cohere_vs_groq_20260129084246;command-a-03-2025;llama-3.3-70b-versatile;29.1.2026;25;1/2-1/2;Petrov's Defence;C42;0;0;0;0;1;1;3;2;3;3;6;4;4;7;7;6;2;2;57,7;55,8;repetition;24;15;3;2;0;0
+cohere_vs_reka_20260129090356;command-a-03-2025;reka-core-20240501;29.1.2026;26;1/2-1/2;King's Knight Opening;C40;0;0;0;0;2;1;2;4;5;2;3;2;0;0;4;6;2;2;65,2;64,4;repetition;15;14;3;3;0;0
+cohere_vs_youchat_20260129091927;command-a-03-2025;youchat;29.1.2026;27;0-1;King's Knight Opening;C40;0;0;0;0;0;1;0;0;0;1;1;1;4;4;5;4;2;1;45,3;59;checkmate;11;4;4;1;0;0
+groq_vs_gemini_20260129092932;llama-3.3-70b-versatile;gemma-3-27b-it;29.1.2026;28;1/2-1/2;Petrov's Defence Modern Attack;C43;0;0;0;0;1;0;0;1;2;1;0;1;3;4;2;3;3;1;66,5;58;repetition;5;9;1;3;0;0
+groq_vs_cohere_20260129093920;llama-3.3-70b-versatile;command-a-03-2025;29.1.2026;29;1/2-1/2;Petrov's Defence Modern Attack;C43;0;0;0;0;1;0;1;1;2;1;3;3;6;8;11;13;3;1;44,9;39,8;repetition;17;41;1;12;0;5
+groq_vs_reka_20260129100437;llama-3.3-70b-versatile;reka-core-20240501;29.1.2026;30;1/2-1/2;King's Knight Opening;C40;0;0;0;0;8;7;20;12;9;7;14;16;10;18;29;27;2;2;56,3;56,3;repetition;63;86;3;4;0;1
+groq_vs_youchat_20260129140511;llama-3.3-70b-versatile;youchat;29.1.2026;31;1/2-1/2;Vienna Game Falkbeer variation;C26;0;0;0;0;5;5;10;8;9;16;3;3;6;5;27;23;2;2;54,7;54,1;repetition;14;28;3;9;0;0
+reka_vs_gemini_20260129145356;reka-core-20240501;gemma-3-27b-it;29.1.2026;32;1/2-1/2;English Opening;A10;0;0;0;0;0;0;0;1;0;0;3;3;4;4;0;0;2;1;66,3;64,8;repetition;4;7;1;3;0;0
+reka_vs_cohere_20260129151915;reka-core-20240501;command-a-03-2025;29.1.2026;33;1-0;Bongcloud;;0;1;0;0;1;2;1;0;2;0;1;2;3;3;3;3;2;1;57,5;53;checkmate;9;16;2;6;0;2
+reka_vs_groq_20260129153043;reka-core-20240501;llama-3.3-70b-versatile;29.1.2026;34;1/2-1/2;English Opening;A10;0;0;0;0;2;2;1;2;1;4;2;1;7;3;4;6;2;1;51,9;53,9;repetition;16;7;7;2;0;0
+reka_vs_youchat_20260129154542;reka-core-20240501;youchat;29.1.2026;35;1/2-1/2;Bongcloud;;0;0;0;0;3;3;2;8;3;3;3;5;6;1;16;16;2;1;50,7;50;repetition;29;27;4;3;0;0
+youchat_vs_gemini_20260129162139;youchat;gemma-3-27b-it;29.1.2026;36;1/2-1/2;Petrov's Defence;C42;1;0;0;0;4;1;1;4;1;6;4;1;4;2;1;2;2;2;75,1;73,4;repetition;12;15;2;3;0;0
+youchat_vs_cohere_20260129200102;youchat;command-a-03-2025;29.1.2026;37;1/2-1/2;Petrov's Defence;C42;0;0;0;0;7;8;6;8;20;11;2;5;2;4;4;5;2;2;76,4;74,4;repetition;26;39;2;6;0;1
+youchat_vs_groq_20260129204020;youchat;llama-3.3-70b-versatile;29.1.2026;38;1/2-1/2;Petrov's Defence;C42;0;0;0;0;14;13;25;7;10;9;5;22;12;14;20;19;2;2;66,4;65,9;repetition;60;34;7;3;0;0
+youchat_vs_reka_20260129215146;youchat;reka-core-20240501;29.1.2026;39;1/2-1/2;King's Pawn Game;C44;0;0;0;0;3;8;1;7;3;2;3;1;6;2;8;4;1;1;73,7;76,3;repetition;23;23;4;9;2;0

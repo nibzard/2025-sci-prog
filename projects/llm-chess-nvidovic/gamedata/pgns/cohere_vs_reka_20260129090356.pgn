@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "cohere"]
+[Black "reka"]
+[Result "1/2-1/2"]
+
+1. e4 e5 2. Nf3 d5 3. Ng5 d4 4. Nxf7 Ne7 5. Nxh8 Qd7 6. Nf7 Ng8 7. Nh8 Qd8 8. Nf7 Kxf7 9. Bc4+ Ke8 10. Qh5+ Kd7 11. Qg6 Qe7 12. Qxg7 Kd8 13. Qh8 Ke8 14. Qxg8 Qd8 15. Qh8 Qd7 16. Qg8 Qd8 17. Qh8 Qd7 18. Qg8 1/2-1/2
+

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment Variables
+.env
+.env.local
+
+# Database & Data
+*.duckdb
+*.db
+*.sqlite3
+data/databases/
+# Keep raw data/config if they are part of the repo structure, 
+# but ignore large generated logs/outputs
+*.log
+single_log.txt
+test_output.txt
+prompt_output.txt
+
+# IDEs
+.vscode/
+.idea/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Large Raw Data
+data/user_raw/
+.DS_Store
+Thumbs.db

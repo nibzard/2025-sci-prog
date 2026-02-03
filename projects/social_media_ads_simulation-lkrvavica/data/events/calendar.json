@@ -1,0 +1,183 @@
+[
+    {
+        "day": 5,
+        "event_id": "CAL_PAYDAY_01",
+        "scope": "global",
+        "text": "You received your regular payday and feel slightly more financially relaxed.",
+        "tags": [
+            "money",
+            "payday"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 1.0,
+        "cooldown_days": 20,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "budget_pressure_down",
+            "interest_up"
+        ]
+    },
+    {
+        "day": 25,
+        "event_id": "CAL_PAYDAY_02",
+        "scope": "global",
+        "text": "It is payday, giving you a small sense of financial breathing room.",
+        "tags": [
+            "money",
+            "payday"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 1.0,
+        "cooldown_days": 20,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "budget_pressure_down"
+        ]
+    },
+    {
+        "day": 45,
+        "event_id": "CAL_PAYDAY_03",
+        "scope": "global",
+        "text": "Your paycheck arrives today, easing some recent money concerns.",
+        "tags": [
+            "money",
+            "payday"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 1.0,
+        "cooldown_days": 20,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "budget_pressure_down"
+        ]
+    },
+    {
+        "day": 65,
+        "event_id": "CAL_PAYDAY_04",
+        "scope": "global",
+        "text": "You receive your monthly pay, making discretionary spending feel more acceptable.",
+        "tags": [
+            "money",
+            "payday"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 1.0,
+        "cooldown_days": 20,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "spending_flexibility_up"
+        ]
+    },
+    {
+        "day": 85,
+        "event_id": "CAL_PAYDAY_05",
+        "scope": "global",
+        "text": "It is payday again, briefly improving your financial mood.",
+        "tags": [
+            "money",
+            "payday"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 1.0,
+        "cooldown_days": 20,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_down"
+        ]
+    },
+    {
+        "day": 12,
+        "event_id": "CAL_HOLIDAY_01",
+        "scope": "global",
+        "text": "A public holiday slows things down and disrupts normal routines.",
+        "tags": [
+            "holiday",
+            "routine"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.0,
+        "cooldown_days": 100,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "attention_fragmentation_up"
+        ]
+    },
+    {
+        "day": 32,
+        "event_id": "CAL_HOLIDAY_02",
+        "scope": "global",
+        "text": "Today is a widely observed holiday, changing usual schedules and expectations.",
+        "tags": [
+            "holiday",
+            "schedule"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.0,
+        "cooldown_days": 100,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "routine_disruption"
+        ]
+    },
+    {
+        "day": 52,
+        "event_id": "CAL_HOLIDAY_03",
+        "scope": "global",
+        "text": "A seasonal holiday brings a mix of distraction and mild anticipation.",
+        "tags": [
+            "holiday",
+            "seasonal"
+        ],
+        "severity": 0.4,
+        "polarity": "positive",
+        "frequency_weight": 0.0,
+        "cooldown_days": 100,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "arousal_up"
+        ]
+    },
+    {
+        "day": 72,
+        "event_id": "CAL_HOLIDAY_04",
+        "scope": "global",
+        "text": "A quiet holiday creates a slower pace and reduced external demands.",
+        "tags": [
+            "holiday",
+            "rest"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.0,
+        "cooldown_days": 100,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    },
+    {
+        "day": 92,
+        "event_id": "CAL_HOLIDAY_05",
+        "scope": "global",
+        "text": "An end-of-period holiday brings reflection and mild fatigue.",
+        "tags": [
+            "holiday",
+            "fatigue"
+        ],
+        "severity": 0.4,
+        "polarity": "neutral",
+        "frequency_weight": 0.0,
+        "cooldown_days": 100,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "fatigue_up"
+        ]
+    }
+]

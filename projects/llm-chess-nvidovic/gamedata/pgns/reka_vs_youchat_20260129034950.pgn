@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "reka"]
+[Black "youchat"]
+[Result "0-1"]
+
+1. e4 e5 2. Ke2 d5 3. Ke3 Qh4 4. f3 d4+ 5. Ke2 d3+ 6. Ke3 Be7 7. Ne2 Nf6 8. Nd4 Kd8 9. g3 exd4+ 10. Kxd4 Kd7 11. Ke5 Nc6+ 12. Kf5 Rg8 13. e5 Rh8 14. Qe2 Rg8 15. Qe4 Rh8 16. Qd5+ Bd6 17. Qe6+ Kd8 18. g4 Ng8 19. Qd7+ Kxd7 20. exd6 Nf6 21. f4 Rg8 22. c4 Rh8 23. Bxd3 Rg8 24. Be4 Kxd6# 0-1
+

@@ -1,0 +1,75 @@
+
+
+==================================================def extract_color_features(image):
+    """
+    Izvlači značajke boja koristeći OpenCV i KMeans.
+    Ulaz: PIL Image objekt (RGB)
+    """
+    if image is None:
+        return {}
+
+    # Konverzija PIL -> NumPy (RGB)
+    img_np = np.array(image)
+
+    # Resize for speed
+    # OpenCV koristi numpy array, ali resize očekuje (width, height)
+    img_small = cv2.resize(img_np, (100, 100), interpolation=cv2.INTER_AREA)
+    pixels = img_small.reshape(-1, 3)
+
+    # KMeans
+    kmeans = KMeans(n_clusters=3, n_init=10)
+    kmeans.fit(pixels)
+    colors = kmeans.cluster_centers_ # RGB values
+
+    # HSV analiza
+    # cv2.cvtColor očekuje uint8 i ako je ulaz RGB, koristimo COLOR_RGB2HSV
+    hsv_img = cv2.cvtColor(img_small, cv2.COLOR_RGB2HSV)
+
+    mean_h = np.mean(hsv_img[:, :, 0])
+    mean_s = np.mean(hsv_img[:, :, 1])
+    mean_v = np.mean(hsv_img[:, :, 2])
+
+    # Kategorizacija
+    if mean_v > 170: brightness_cat = "light"
+    elif mean_v > 85: brightness_cat = "medium"
+    else: brightness_cat = "dark"
+
+    if mean_s > 150: saturation_cat = "vibrant"
+    elif mean_s > 50: saturation_cat = "balanced"
+    else: saturation_cat = "muted"
+
+    h = mean_h
+    if (h >= 0 and h < 15) or (h >= 165 and h <= 179): hue_cat = "red"
+    elif h >= 15 and h < 35: hue_cat = "yellow"
+    elif h >= 35 and h < 85: hue_cat = "green"
+    elif h >= 85 and h < 130: hue_cat = "blue"
+    elif h >= 130 and h < 165: hue_cat = "violet"
+    else: hue_cat = "mixed"
+
+    # Visual impact heuristic
+    visual_impact = (mean_s + mean_v) / 2 / 255.0
+
+    dominant_colors_hex = []
+    for c in colors:
+        dominant_colors_hex.append('#%02x%02x%02x' % (int(c[0]), int(c[1]), int(c[2])))
+
+    features = {
+        'dominant_colors': dominant_colors_hex,
+        'brightness': float(mean_v),
+        'brightness_category': brightness_cat,
+        'saturation': float(mean_s),
+        'saturation_category': saturation_cat,
+        'hue': float(mean_h * 2),
+        'hue_category': hue_cat,
+        'visual_impact': float(visual_impact)
+    }
+
+    return features
+
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=data, x='group', y='visual_impact', hue='group')
+plt.title('Visual Impact po grupama')
+plt.xlabel('Grupa')
+plt.ylabel('Visual Impact')
+plt.xticks(rotation=45, ha='right')
+plt.show()

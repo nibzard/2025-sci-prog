@@ -1,0 +1,10 @@
+[Event "AI Chess Match"]
+[Site "?"]
+[Date "2026.01.29"]
+[Round "?"]
+[White "groq"]
+[Black "reka"]
+[Result "1/2-1/2"]
+
+1. e4 e5 2. Nf3 d5 3. Bd3 d4 4. Nc3 Qe7 5. Nd5 Kd8 6. Nxe7 Nxe7 7. b3 Ke8 8. b4 Kd8 9. c4 Ke8 10. c5 Kd8 11. Nxe5 Ng8 12. Bc4 Ke7 13. Bd5 c6 14. Ke2 Ke8 15. Kd3 Ne7 16. Ba3 f6 17. Qe2 Rg8 18. Qf3 Bd7 19. Qf4 Nc8 20. Kxd4 Kd8 21. Qf5 g6 22. Qxf6+ Ke8 23. Qf7+ Kd8 24. Qg7 Ke8 25. Nxd7 Rh8 26. Nf6+ Kd8 27. Rhg1 Rg8 28. Qxh7 Rh8 29. Qh6 Rg8 30. e5 Rh8 31. Qh7 Rg8 32. Qg7 Rh8 33. Qf7 g5 34. Qe7+ Bxe7 35. Be4 Rg8 36. Rgf1 Rh8 37. Ng8 Rxg8 38. Rad1 Rf8 39. Bf3 Rg8 40. Rfe1 Rf8 41. e6 Rg8 42. Bd5 Rh8 43. Bxc6 Rg8 44. Re2 Rh8 45. Ke5 Rg8 46. Re4 Rf8 47. Re3 Rg8 48. Re4 Rf8 49. d3 Rg8 50. b5 Rh8 51. f3 Rg8 52. Rd4+ Kc7 53. Rd2 Rh8 54. Re2 Rg8 55. Re3 Rh8 56. f4 Rg8 57. Ree4 Rh8 58. b6+ Kxc6 59. Rd5 Rg8 60. f5 g4 61. Rdd4 Bf8 62. Re3 Rh8 63. f6 Rg8 64. e7 Rh8 65. exf8=Q Rg8 66. Ree4 Rh8 67. Rd5 Rg8 68. Ke6 Rh8 69. Rd6+ Kb5 70. Ke5 Rg8 71. Rd5 Rh8 72. Ke6 Rg8 73. Ree5 Rh8 74. f7 Rg8 75. fxg8=Q Ne7 76. c6+ Kxc6 77. Kf7 Nxg8 78. Ke6 Nf6 79. Kf7 Ng8 80. Re6+ Kxd5 81. Re7 Nf6 82. h3 g3 83. d4 Ng4 84. h4 Kc6 85. h5 Nd7 86. d5+ Kxd5 87. h6 Nxf8 88. h7 Re8 89. h8=Q Rd8 90. Qg8 Re8 91. Qh8 Rd8 92. Qg8 Re8 1/2-1/2
+

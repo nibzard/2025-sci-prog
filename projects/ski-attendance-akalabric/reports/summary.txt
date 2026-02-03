@@ -1,0 +1,11 @@
+Final Report Summary
+===================
+
+Rows: 5988 | Cols: 36
+Target distribution:
+attendance
+high      1996
+medium    1996
+low       1996
+
+Figures saved in: reports/figures/

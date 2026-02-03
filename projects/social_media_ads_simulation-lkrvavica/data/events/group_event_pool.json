@@ -1,0 +1,362 @@
+[
+    {
+        "day": -1,
+        "event_id": "GRP_OUTING_CANCEL_01",
+        "scope": "group",
+        "text": "A planned group activity was quietly canceled.",
+        "tags": [
+            "social",
+            "plans"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "mood_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_OUTING_SUCCESS_01",
+        "scope": "group",
+        "text": "A recent group activity went better than expected.",
+        "tags": [
+            "social",
+            "success"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "trust_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_COMMUNICATION_FRICTION_01",
+        "scope": "group",
+        "text": "Minor miscommunications have made coordination slightly harder.",
+        "tags": [
+            "communication",
+            "friction"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 8,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_COMMUNICATION_SMOOTH_01",
+        "scope": "group",
+        "text": "Communication within the group feels unusually smooth.",
+        "tags": [
+            "communication",
+            "efficiency"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 8,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "trust_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_SHARED_STRESS_01",
+        "scope": "group",
+        "text": "The group is dealing with a mildly stressful shared situation.",
+        "tags": [
+            "stress",
+            "shared"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 9,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "patience_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_SHARED_RELIEF_01",
+        "scope": "group",
+        "text": "A previously stressful group situation has eased.",
+        "tags": [
+            "relief",
+            "shared"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 9,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_DEADLINE_PRESSURE_01",
+        "scope": "group",
+        "text": "An approaching group deadline creates low-level pressure.",
+        "tags": [
+            "deadline",
+            "pressure"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 7,
+        "duration_days": 3,
+        "expected_effects_hint": [
+            "attention_fragmentation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_DEADLINE_MET_01",
+        "scope": "group",
+        "text": "The group recently met an important deadline.",
+        "tags": [
+            "deadline",
+            "completion"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 7,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "confidence_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_PARTICIPATION_LOW_01",
+        "scope": "group",
+        "text": "Participation in group activities feels lower than usual.",
+        "tags": [
+            "engagement",
+            "social"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 8,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "motivation_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_PARTICIPATION_HIGH_01",
+        "scope": "group",
+        "text": "Group members seem more engaged than usual.",
+        "tags": [
+            "engagement",
+            "social"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 8,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "social_energy_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_INTERNAL_TENSION_01",
+        "scope": "group",
+        "text": "Subtle tension within the group is noticeable.",
+        "tags": [
+            "tension",
+            "social"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.5,
+        "cooldown_days": 12,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "trust_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_INTERNAL_CALM_01",
+        "scope": "group",
+        "text": "The group atmosphere feels calm and stable.",
+        "tags": [
+            "calm",
+            "social"
+        ],
+        "severity": 0.2,
+        "polarity": "positive",
+        "frequency_weight": 0.4,
+        "cooldown_days": 12,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "stress_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_COORDINATION_ISSUE_01",
+        "scope": "group",
+        "text": "Coordination issues slow down group progress slightly.",
+        "tags": [
+            "coordination",
+            "friction"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 9,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "irritation_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_COORDINATION_IMPROVED_01",
+        "scope": "group",
+        "text": "Group coordination feels more efficient than usual.",
+        "tags": [
+            "coordination",
+            "efficiency"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 9,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "confidence_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_SHARED_BOREDOM_01",
+        "scope": "group",
+        "text": "Group interactions feel slightly repetitive lately.",
+        "tags": [
+            "boredom",
+            "routine"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.7,
+        "cooldown_days": 6,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "novelty_seeking_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_NEW_IDEA_01",
+        "scope": "group",
+        "text": "A new idea is circulating within the group.",
+        "tags": [
+            "ideas",
+            "novelty"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 6,
+        "duration_days": 2,
+        "expected_effects_hint": [
+            "curiosity_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_LEADERSHIP_SHIFT_01",
+        "scope": "group",
+        "text": "A small shift in group leadership changes dynamics slightly.",
+        "tags": [
+            "leadership",
+            "change"
+        ],
+        "severity": 0.3,
+        "polarity": "neutral",
+        "frequency_weight": 0.4,
+        "cooldown_days": 15,
+        "duration_days": 3,
+        "expected_effects_hint": [
+            "uncertainty_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_SUPPORTIVE_MOMENT_01",
+        "scope": "group",
+        "text": "A supportive gesture within the group is noticed.",
+        "tags": [
+            "support",
+            "social"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "trust_up"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_FEEDBACK_NEGATIVE_01",
+        "scope": "group",
+        "text": "Recent group feedback feels more critical than usual.",
+        "tags": [
+            "feedback",
+            "criticism"
+        ],
+        "severity": 0.4,
+        "polarity": "negative",
+        "frequency_weight": 0.6,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "confidence_down"
+        ]
+    },
+    {
+        "day": -1,
+        "event_id": "GRP_FEEDBACK_POSITIVE_01",
+        "scope": "group",
+        "text": "Recent group feedback feels encouraging.",
+        "tags": [
+            "feedback",
+            "encouragement"
+        ],
+        "severity": 0.3,
+        "polarity": "positive",
+        "frequency_weight": 0.5,
+        "cooldown_days": 10,
+        "duration_days": 1,
+        "expected_effects_hint": [
+            "confidence_up"
+        ]
+    }
+]
