@@ -1,0 +1,129 @@
+[
+  {
+    "subreddit": "LenovoLegion",
+    "url": "https://www.reddit.com/r/LenovoLegion",
+    "title": "Reddit - The heart of the internet",
+    "scraped_at": "2026-01-25 16:58:54",
+    "lenovo_topics": [
+      {
+        "title": "r/LenovoLegion",
+        "type": "lenovo_topic"
+      },
+      {
+        "title": "Your New Legion: The Essential Setup & Check Guide",
+        "type": "lenovo_topic"
+      },
+      {
+        "title": "r/LenovoLegion Rules",
+        "type": "lenovo_topic"
+      }
+    ],
+    "discussions": [
+      {
+        "title": "Your New Legion: The Essential Setup & Check GuideAnnouncementvotes \u2022comments",
+        "url": "/r/LenovoLegion/comments/1lvf6lw/your_new_legion_the_essential_setup_check_guide/",
+        "type": "discussion"
+      },
+      {
+        "title": "Message from Clifford (Lenovo) regarding Pixelshift/Image Cleaning on Gen 10 OLED PanelsLenovo Newsv...",
+        "url": "/r/LenovoLegion/comments/1oo38q2/message_from_clifford_lenovo_regarding/",
+        "type": "discussion"
+      },
+      {
+        "title": "What is the best way to preserve the battery",
+        "url": "/r/LenovoLegion/comments/1qmahdt/what_is_the_best_way_to_preserve_the_battery/",
+        "type": "discussion"
+      },
+      {
+        "title": "My First Gaming Laptop",
+        "url": "/r/LenovoLegion/comments/1qjxxm1/my_first_gaming_laptop/",
+        "type": "discussion"
+      },
+      {
+        "title": "New Lenovo Legion 5",
+        "url": "/r/LenovoLegion/comments/1qmjmpo/new_lenovo_legion_5/",
+        "type": "discussion"
+      }
+    ]
+  },
+  {
+    "subreddit": "GamingLaptops",
+    "url": "https://www.reddit.com/r/GamingLaptops",
+    "title": "Reddit - The heart of the internet",
+    "scraped_at": "2026-01-25 16:58:58",
+    "lenovo_topics": [
+      {
+        "title": "r/GamingLaptops",
+        "type": "lenovo_topic"
+      },
+      {
+        "title": "ASUS ROG Laptops are Broken by Design: A Forensic Deep Dive",
+        "type": "lenovo_topic"
+      },
+      {
+        "title": "Heads up! Impending Price Hikes for Gaming Laptops",
+        "type": "lenovo_topic"
+      },
+      {
+        "title": "r/GamingLaptops Rules",
+        "type": "lenovo_topic"
+      }
+    ],
+    "discussions": [
+      {
+        "title": "ASUS ROG Laptops are Broken by Design: A Forensic Deep DiveOfficialvotes \u2022comments",
+        "url": "/r/GamingLaptops/comments/1pw3qud/asus_rog_laptops_are_broken_by_design_a_forensic/",
+        "type": "discussion"
+      },
+      {
+        "title": "Heads up! Impending Price Hikes for Gaming Laptops\u26a0\ufe0f WARNINGvotes \u2022comments",
+        "url": "/r/GamingLaptops/comments/1p8vjyl/heads_up_impending_price_hikes_for_gaming_laptops/",
+        "type": "discussion"
+      },
+      {
+        "title": "More RGB = More FPS",
+        "url": "/r/GamingLaptops/comments/1qmcbnc/more_rgb_more_fps/",
+        "type": "discussion"
+      },
+      {
+        "title": "gaming plus study setup",
+        "url": "/r/GamingLaptops/comments/1qkugfp/gaming_plus_study_setup/",
+        "type": "discussion"
+      },
+      {
+        "title": "Is this regular temperature? For my laptop?",
+        "url": "/r/GamingLaptops/comments/1qly4mx/is_this_regular_temperature_for_my_laptop/",
+        "type": "discussion"
+      }
+    ]
+  },
+  {
+    "subreddit": "Lenovo",
+    "url": "https://www.reddit.com/r/Lenovo",
+    "title": "Reddit - The heart of the internet",
+    "scraped_at": "2026-01-25 16:59:03",
+    "lenovo_topics": [],
+    "discussions": [
+      {
+        "title": "Lenovo's response to Intel 13th and 14th Generation Desktop Processor Instability (Device SN Identif...",
+        "url": "/r/Lenovo/comments/1eu26fo/lenovos_response_to_intel_13th_and_14th/",
+        "type": "discussion"
+      },
+      {
+        "title": "Does anyone know what\u2019s wrong with my Lenovo Ideapad S145?",
+        "url": "/r/Lenovo/comments/1qmfbrc/does_anyone_know_whats_wrong_with_my_lenovo/",
+        "type": "discussion"
+      },
+      {
+        "title": "Rate my Setup",
+        "url": "/r/Lenovo/comments/1ql1hme/rate_my_setup/",
+        "type": "discussion"
+      },
+      {
+        "title": "The duality of life",
+        "url": "/r/Lenovo/comments/1qmgqos/the_duality_of_life/",
+        "type": "discussion"
+      }
+    ]
+  }
+]

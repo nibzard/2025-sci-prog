@@ -1,0 +1,107 @@
+from urllib.parse import quote_plus
+import requests
+import json
+import csv
+import time
+from bs4 import BeautifulSoup
+
+#fuction - > main scraper to get content from reddit
+def scrape_reddit_search() -> list[dict]:
+
+    SEARCH_TERMS = [
+        "lenovo legion y540",
+        "legion y540 overheating",
+        "legion y540 review"
+    ]
+
+    BASE_SEARCH_URL = "https://www.reddit.com/search/?q="
+
+    headers = {
+            'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            }
+
+    all_data = []
+    for query in SEARCH_TERMS:
+        print(f'Scraping reddit_query: {query}')
+        encoded_query = quote_plus(query)
+        search_url = BASE_SEARCH_URL + encoded_query
+        print(f'Search URL: {search_url}')
+
+        try:
+            response = requests.get(search_url, headers=headers, timeout=10)
+            response.raise_for_status()
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            posts = []
+            seen_urls = set()
+
+            for link in soup.find_all('a', href=True):
+                href = link['href']
+                title = link.get_text(strip=True)
+                if("/comments/" in href
+                   and title
+                   and href not in seen_urls):
+                    posts.append({
+                        "title": title,
+                        "url": "https://www.reddit.com" + href,
+                        "source": "reddit_search"
+                    })
+                    seen_urls.add(href)
+            all_data.append({
+                "query": query,
+                "search_url": search_url,
+                "scraped_at": time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()),
+                "results": posts
+            })        
+
+            time.sleep(2)
+
+        except Exception as e:
+            print(f"Error fetching {query}: {e}")
+
+    return all_data
+
+
+def save_scraped_data(data, filename_json="reddit_search_results.json", filename_csv="reddit_search_results.csv"):
+    if not data:
+        print("No data to save.")
+        return
+    #json
+    try:
+        with open(filename_json, "w", encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=True, indent=2)
+        print(f"Reddit search results saved to: {filename_json}")
+    except Exception as e:
+        print(f"Error saving JSON file: {e}")
+
+    #csv
+    try:
+        with open(filename_csv, "w", newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Query", "Type", "Title", "Scraped_at"])
+
+            for block in data:
+                print(f"Saving results for query: {block['query']}")
+                print(f"Number of posts: {len(block['results'])}")
+                print(f"Posts: {block['results']}")
+                for post in block["results"]:
+                    writer.writerow([
+                        block["query"],
+                        post["title"],
+                        post["url"],
+                        block["scraped_at"]
+                    ])
+            print("All topics saved to files!")
+    except Exception as e:
+        print(f"Error saving CSV file: {e}")
+
+
+
+def main() -> None:
+    data = scrape_reddit_search()
+    save_scraped_data(data)
+    
+
+if __name__ == "__main__":
+    main()
