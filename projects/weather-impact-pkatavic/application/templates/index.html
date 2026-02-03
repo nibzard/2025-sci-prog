@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="bolt">⚡</span>
+                <h1>Energy Consumption Predictor</h1>
+            </div>
+            <p class="subtitle">PJM Pennsylvania Grid • LightGBM Model • R² = 0.94</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Form Card -->
+            <section class="card input-card">
+                <div class="card-header">
+                    <span class="icon">⚡</span>
+                    <h2>Input Parameters</h2>
+                </div>
+
+                <form id="prediction-form">
+                    <!-- Temperature Slider -->
+                    <div class="form-group">
+                        <label for="temperature">
+                            <span class="label-icon">🌡️</span>
+                            Temperature
+                            <span class="value-display" id="temp-value">10°C</span>
+                        </label>
+                        <input type="range" id="temperature" name="temperature"
+                               min="-20" max="40" value="10" class="slider">
+                        <div class="range-labels">
+                            <span>-20°C</span>
+                            <span>40°C</span>
+                        </div>
+                    </div>
+
+                    <!-- Wind Speed Slider -->
+                    <div class="form-group">
+                        <label for="wind_speed">
+                            <span class="label-icon">💨</span>
+                            Wind Speed
+                            <span class="value-display" id="wind-value">15 km/h</span>
+                        </label>
+                        <input type="range" id="wind_speed" name="wind_speed"
+                               min="0" max="50" value="15" class="slider">
+                        <div class="range-labels">
+                            <span>0 km/h</span>
+                            <span>50 km/h</span>
+                        </div>
+                    </div>
+
+                    <!-- Humidity Slider -->
+                    <div class="form-group">
+                        <label for="humidity">
+                            <span class="label-icon">💧</span>
+                            Humidity
+                            <span class="value-display" id="humidity-value">70%</span>
+                        </label>
+                        <input type="range" id="humidity" name="humidity"
+                               min="20" max="100" value="70" class="slider">
+                        <div class="range-labels">
+                            <span>20%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <!-- Date and Season Row -->
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="date">
+                                <span class="label-icon">📅</span>
+                                Date
+                            </label>
+                            <input type="date" id="date" name="date" class="input-field">
+                        </div>
+
+                        <div class="form-group half">
+                            <label for="season">
+                                <span class="label-icon">🍂</span>
+                                Season
+                            </label>
+                            <select id="season" name="season" class="input-field">
+                                <option value="spring">🌸 Spring</option>
+                                <option value="summer">☀️ Summer</option>
+                                <option value="autumn">🍂 Autumn</option>
+                                <option value="winter">❄️ Winter</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Weekend Checkbox -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="is_weekend" name="is_weekend">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">
+                                <span class="label-icon">🏠</span>
+                                Weekend Day
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="predict-btn" id="predict-btn">
+                        <span class="btn-icon">⚡</span>
+                        <span class="btn-text">Predict Energy Consumption</span>
+                        <span class="btn-loader" id="btn-loader"></span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Card -->
+            <section class="card results-card" id="results-card">
+                <div class="card-header">
+                    <span class="icon">📊</span>
+                    <h2>Prediction Results</h2>
+                </div>
+
+                <!-- Main Prediction Display -->
+                <div class="prediction-display" id="prediction-display">
+                    <div class="prediction-label">Predicted Energy Consumption</div>
+                    <div class="prediction-value">
+                        <span class="bolt-small">⚡</span>
+                        <span id="prediction-number">--</span>
+                        <span class="unit">MW</span>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">📈</div>
+                        <div class="metric-label">vs. Average</div>
+                        <div class="metric-value" id="avg-diff">--</div>
+                        <div class="metric-sublabel" id="avg-diff-pct">--</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">📊</div>
+                        <div class="metric-label">Historical Avg</div>
+                        <div class="metric-value" id="avg-consumption">--</div>
+                        <div class="metric-sublabel">MW</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">🎯</div>
+                        <div class="metric-label">Confidence</div>
+                        <div class="metric-value" id="confidence">--</div>
+                        <div class="metric-sublabel">Model Certainty</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">🏆</div>
+                        <div class="metric-label">Model R²</div>
+                        <div class="metric-value" id="model-r2">0.94</div>
+                        <div class="metric-sublabel">Accuracy Score</div>
+                    </div>
+                </div>
+
+                <!-- Comparison Bar -->
+                <div class="comparison-section">
+                    <div class="comparison-label">Prediction vs Historical Average</div>
+                    <div class="comparison-bar-container">
+                        <div class="comparison-bar" id="comparison-bar">
+                            <div class="bar-avg" id="bar-avg"></div>
+                            <div class="bar-prediction" id="bar-prediction"></div>
+                        </div>
+                        <div class="comparison-legend">
+                            <span class="legend-item">
+                                <span class="legend-color avg"></span> Average
+                            </span>
+                            <span class="legend-item">
+                                <span class="legend-color prediction"></span> Prediction
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                <span class="bolt-mini">⚡</span>
+                PJM Energy Dataset (2002-2018) • LightGBM Model • 50 Features
+            </p>
+        </footer>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast" id="error-toast">
+        <span class="toast-icon">⚠️</span>
+        <span class="toast-message" id="toast-message">An error occurred</span>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
