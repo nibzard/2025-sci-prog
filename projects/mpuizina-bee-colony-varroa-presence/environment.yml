@@ -1,0 +1,16 @@
+name: zp_projekt
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - marimo
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - rpy2
+  - r-lme4
+  - r-car
