@@ -1,0 +1,7 @@
+flask>=2.3.0
+flask-cors>=4.0.0
+numpy>=1.24.0
+lightgbm>=4.0.0
+
+# Note: LightGBM requires libomp on macOS
+# Install via: brew install libomp
