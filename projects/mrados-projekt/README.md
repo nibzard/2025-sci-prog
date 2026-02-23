@@ -1,167 +1,179 @@
-🖥️ LaptopCompare AI - Intelligent Laptop Comparison Platform
-🎯 Project Overview
-LaptopCompare AI is a fullstack web application that provides comprehensive laptop comparisons by combining objective specifications with subjective user experiences. Unlike traditional comparison tools that rely solely on technical specs, this platform integrates real-world feedback from Reddit discussions and YouTube reviews to give users a holistic understanding of laptop performance and user satisfaction.
-Problem Statement
-Current laptop comparison websites suffer from several limitations:
+# LaptopAI – Analiza korisničkih recenzija laptopa pomoću AI-a
 
-Spec-only comparisons fail to capture real-world user experience, build quality, and long-term reliability
-Subjective reviews are scattered across multiple platforms (Reddit, YouTube, tech forums)
-No unified scoring system that combines both objective metrics and subjective user sentiment
-Difficulty in finding authentic user opinions among sponsored content and marketing materials
+LaptopAI automatski prikuplja Reddit recenzije laptopa, semantički ih pohranjuje i koristi AI za generiranje strukturiranih preporuka temeljenih na sentimentu korisnika.
 
-Hypothesis
-By combining three distinct data sources (technical specifications, Reddit community feedback, and YouTube review analysis), we can create a more accurate and holistic laptop comparison score that better predicts user satisfaction than spec-based comparisons alone. We hypothesize that:
+---
 
-Specification scores will correlate strongly with performance benchmarks but poorly with user satisfaction
-Reddit sentiment scores will reveal long-term reliability issues and real-world usability concerns not captured in specs
-YouTube review scores will provide expert insights on build quality, display characteristics, and subjective features
-Combined scoring will provide superior predictive power for purchase decisions
+## Problem
 
-🛠 Technologies Used
-Database & Storage
+Kupnja laptopa je otežana zbog:
+- **Previše rasutih recenzija** – korisnici dijele iskustva na desetke subreddita
+- **Nemoguće usporedbe** – teško je usporediti iskustva različitih korisnika
+- **Gubljen vremena** – nitko ne želi čitati stotine postova i komentara
+- **Konfuzne informacije** – često su službene recenzije nedovoljne ili pristrane
 
-ChromaDB - Vector database for semantic search and SEO optimization
-Postgres 
+---
 
-Data Collection & Processing
-Python (optional microservice) - Web scraping and data preprocessing
-OpenAI/Groq API - NLP for sentiment analysis and scoring
+## Rješenje
 
-📊 Data Sources & Collection Methodology
-1. Technical Specifications
-Source: Manufacturer websites, tech spec databases (GSMArena, NotebookCheck)
-Data Points Collected:
+LaptopAI rješava ovaj problem kroz automatizirani pipeline:
 
-Processor (CPU model, cores, threads, clock speed)
-Graphics (GPU model, VRAM)
-Memory (RAM size, type, speed)
-Storage (SSD/HDD capacity, type)
-Display (size, resolution, refresh rate, panel type)
-Battery capacity
-Weight and dimensions
-Port configuration
-Price (MSRP and current market price)
+1. **Prikupljanje** – pronalazi relevantne Reddit rasprave o laptopima
+2. **Pohranjivanje** – sprema ih u semantički pretraživu bazu znanja
+3. **Analiza** – koristi AI za ekstrakciju sentimenta, prednosti i nedostataka
+4. **Rezultat** – isporučuje čistu, strukturiranu preporuku i usporedbu
 
-Collection Method:
+---
 
-Web scraping using Puppeteer/Playwright
-API integration where available
-Manual data entry for edge cases
-Periodic updates (weekly) to capture price changes
-2. Reddit Community Feedback
-Source: Subreddits (r/laptops, r/SuggestALaptop, r/thinkpad, r/GamingLaptops, etc.)
-Data Points Collected:
+## Ključne funkcionalnosti
 
-Post titles and content mentioning laptop models
-Comment threads discussing user experiences
-Sentiment (positive, negative, neutral)
-Common issues mentioned (thermal throttling, build quality, customer service)
-Longevity reports (6-month, 1-year, 2-year reviews)
+🔍 **Reddit scraping** – automatsko prikupljanje korisničkih recenzija  
+🧠 **Semantičko pretraživanje** – embeddinzi omogućuju pronalaženje relevantnih informacija  
+🤖 **AI analiza sentimenta** – Google Gemini ekstrahira pros/cons i ocjenjuje laptope  
+📊 **Strukturirani output** – JSON rezultati spremni za frontend  
+⚔️ **Laptop Battle UI** – web sučelje za usporedbu dva laptopa u realnom vremenu  
+📁 **Modularni dizajn** – nezavisni scraper, vector store i LLM slojevi  
 
-Collection Method:
+---
 
-Use Exa AI to find relevant Reddit posts: exa.search("Reddit user reviews [laptop model]")
-Filter posts by:
+## Primjer rezultata
 
-Minimum upvotes (>10)
-Recency (last 12 months)
-Engagement (comment count)
-
-
-Extract and analyze using Groq API
-
-3. YouTube Review Analysis
-Source: Tech review channels (Dave2D, JarrodsTech, Hardware Canucks, LTT, etc.)
-Data Points Collected:
-
-Video transcripts from review videos
-Reviewer sentiment and tone
-Pros and cons explicitly mentioned
-Performance test results discussed
-Final recommendations/verdicts
-
-Collection Method:
-
-Use Exa AI to find review videos: exa.search("YouTube review [laptop model]")
-Priority given to:
-
-Established tech reviewers (verified channels)
-Videos >5 minutes (comprehensive reviews)
-Upload date within last 18 months
-
-
-Extract transcript using YouTube Transcript API
-Analyze with Groq API
-
-🏗️ System Architecture
-┌─────────────────┐
-│   User          │
-│   (Frontend)    │
-└────────┬────────┘
-         │
-         ├──────────────┬──────────────┬──────────────┐
-         │              │              │              │
-    ┌────▼─────┐  ┌─────▼─────┐  ┌────▼─────┐  ┌────▼─────┐
-    │ Spec DB  │  │  Exa AI   │  │Groq API  │  │ChromaDB  │
-    │(Postgres)│  │  Search   │  │Analysis  │  │ Vectors  │
-    └──────────┘  └───────────┘  └──────────┘  └──────────┘
-                        │              │
-                   ┌────▼────┐    ┌────▼──── ┐
-                   │ Reddit  │    │YouTube   │
-                   │  PRAW   │    │Transcript│
-                   └─────────┘    └───────── ┘
-
-
-
-
-
-1. User requests comparison: /compare/laptop-a-vs-laptop-b
-2. Fetch scores from database
-3. Generate visualization data
-4. Cache results in Redis (1 week TTL)
-5. Serve to frontend
+### Unos
+```
+Laptop 1: Lenovo Legion Y540
+Laptop 2: Dell XPS 15
 ```
 
-## 📈 Expected Outcomes
-
-1. **Comprehensive Scoring System**: Three independent scores (Specs, Reddit, YouTube) each 0-100
-2. **SEO-Optimized URLs**: Dynamic routes like `/compare/macbook-pro-m3-vs-dell-xps-15`
-3. **Visual Comparisons**: Radar charts, bar charts comparing all three dimensions
-4. **Insight Generation**: AI-generated summary explaining score differences
-5. **User Trust**: Transparent methodology with source links to Reddit/YouTube
-
-## 🎨 UI/UX Design
-
-### Comparison Page Structure
+### Izlaz
+```json
+{
+  "laptop_name": "Lenovo Legion Y540",
+  "sentiment_score": 78,
+  "pros": [
+    "Odličan omjer cijene i performansi",
+    "Dobro hlađenje uz RTX 2060",
+    "Kvalitetna tipkovnica"
+  ],
+  "cons": [
+    "Loša baterija (2-3 sata)",
+    "Osrednji ekran (sRGB ~60%)",
+    "Plastični build quality"
+  ],
+  "user_recommendation": "Preporučeno za gaming na budžetu, ali ne za profesionalnu upotrebu."
+}
 ```
-┌─────────────────────────────────────────┐
-│  LaptopCompare AI                       │
-│  [Laptop A] vs [Laptop B]              │
-├─────────────────────────────────────────┤
-│                                         │
-│  ┌──────────────┐    ┌──────────────┐ │
-│  │  Laptop A    │    │  Laptop B    │ │
-│  │  Image       │    │  Image       │ │
-│  └──────────────┘    └──────────────┘ │
-│                                         │
-│  Overall Score: 87/100  vs  82/100     │
-│                                         │
-│  📊 Radar Chart (Specs/Reddit/YouTube)  │
-│                                         │
-│  🔧 Spec Score:     85 vs 80          │
-│  💬 Reddit Score:   88 vs 82          │
-│  🎥 YouTube Score:  89 vs 84          │
-│                                         │
-│  📝 AI Summary: [Why these scores]     │
-│                                         │
-│  [View Reddit Sources] [View YouTube]  │
-└─────────────────────────────────────────┘
 
+---
 
-📚 References & Inspiration
+## Tehnologije
 
-Exa AI Documentation
-Groq API Documentation
-ChromaDB Documentation
-Reddit API Guidelines: PRAW Documentation
-YouTube Transcript Extraction: youtube-transcript-api
+**Backend**
+- Python 3.11+
+- FastAPI (REST API)
+- ChromaDB (vector baza podataka)
+- SentenceTransformers (embeddinzi)
+- Google Gemini API (LLM analiza)
+
+**Frontend**
+- React 18
+- Vite
+- TailwindCSS
+- Axios
+
+**Scraping**
+- BeautifulSoup4
+- Requests
+
+---
+
+## Kako pokrenuti projekt
+
+### 1. Backend (FastAPI)
+
+```bash
+# Instalacija dependencies
+pip install -r requirements.txt
+
+# Pokretanje API servera
+python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+API će biti dostupan na `http://localhost:8000`
+
+### 2. Frontend (React)
+
+```bash
+# Ulazak u frontend folder
+cd laptop-battle-ui
+
+# Instalacija dependencies
+npm install
+
+# Pokretanje development servera
+npm run dev
+```
+
+Frontend će biti dostupan na `http://localhost:5173`
+
+### 3. Pipeline (opcionalno – za scraping novih laptopa)
+
+```bash
+python pipeline.py
+```
+
+---
+
+## Primjer API poziva
+
+```bash
+POST http://localhost:8000/api/compare
+Content-Type: application/json
+
+{
+  "laptop1": "Lenovo Legion Y540",
+  "laptop2": "Dell XPS 15"
+}
+```
+
+**Odgovor:**
+```json
+{
+  "laptop1": { ... },
+  "laptop2": { ... },
+  "winner": "laptop1",
+  "comparison_summary": "Lenovo Legion Y540 pruža bolje gaming performanse uz nižu cijenu..."
+}
+```
+
+---
+
+## Status projekta
+
+✅ Reddit scraping pipeline  
+✅ ChromaDB vector storage  
+✅ LLM sentiment analiza  
+✅ FastAPI backend s caching sustavom  
+✅ React frontend s battle UI  
+✅ Usporedba dva laptopa  
+
+---
+
+## Budući razvoj
+
+🔮 **Više izvora podataka** – dodavanje YouTube transkripata, foruma, tech blogova  
+🔮 **Automatski scheduled scraping** – dnevno osvježavanje baze znanja  
+🔮 **Historijski tracking** – praćenje promjena sentimenta kroz vrijeme  
+🔮 **Napredne usporedbe** – više od 2 laptopa, performance grafovi  
+🔮 **Deployment** – Docker kontejnerizacija i hosting  
+
+---
+
+## Autori
+
+Projekt razvijen u sklopu kolegija **Završni projekt** na PMF-ST.
+
+---
+
+## Licenca
+
+MIT License
