@@ -1,0 +1,33 @@
+# API kljucevi i lokalne varijable
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter privremene datoteke
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# OS datoteke
+.DS_Store
+Thumbs.db
+
+# Izvorni dataset
+data/raw/Fake.csv
+data/raw/True.csv
+
+# Privremene i log datoteke
+*.log
+*.tmp
+
+# VS Code lokalne postavke
+.vscode/
+
+# prevelike
+data/processed/train.csv 
+data/processed/augmented_train.csv
